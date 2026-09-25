@@ -1,32 +1,47 @@
 # EffectMaker Skill & CDP SDK
 
-可复用的 YouTube Effect Maker 操作 skill、浏览器函数和 CDP 适配器。
+Reusable automation for [YouTube Effect Maker](https://effects.youtube.com/home), with English UI helpers and a [Browser Harness](https://github.com/browser-use/browser-harness) adapter.
 
-- 网站：[YouTube Effect Maker](https://effects.youtube.com/home)
-- 本次测试项目：[HeloWorld](https://effects.youtube.com/edit/Q0FJUXdPMWE)
-- Skill：[SKILL.md](skills/effectmaker/SKILL.md)
-- 使用示例与函数表：[API](skills/effectmaker/references/api.md)
-- 实测范围、失败和未测项：[覆盖报告](skills/effectmaker/references/coverage.md)
+- [Skill entry point](skills/effectmaker/SKILL.md)
+- [Browser Harness setup and recipes](skills/effectmaker/references/browser-harness.md)
+- [JavaScript API](skills/effectmaker/references/api.md)
+- [Coverage and limitations](skills/effectmaker/references/coverage.md)
+- [HeloWorld test project](https://effects.youtube.com/edit/Q0FJUXdPMWE)
 
-## 验证结果
+## Use the skill
 
-79 个可见视觉脚本节点均通过创建与撤销检查，并通过原生 CDP 复测。31 项高层 SDK 页面操作检查通过。独立浏览器的真实 CDP 连接、数值提交及边界校验测试通过。
+Copy `skills/effectmaker/` to `~/.codex/skills/effectmaker/`, then invoke `$effectmaker` or ask to edit an Effect Maker project. Inspect an existing installation before replacing it.
 
-这不是“全功能正确性认证”：每个节点的连线运行语义、所有参数组合、真实手机/摄像头、正式发布等没有全部验证。详细状态见覆盖报告。
+The current SDK targets **English (US)**. In Effect Maker, select **Account menu → Language → English (US)**. The setting reloads the editor; wait for saved state first. Existing object and asset names are project content and retain their original names.
 
-## 安装 skill
+## Browser Harness reuse
 
-将 `skills/effectmaker/` 复制到 `~/.codex/skills/effectmaker/`，在新会话中使用 `$effectmaker`，或直接提出 Effect Maker 编辑任务。已有同名 skill 时请先比较再更新。
+The Python adapter imports Browser Harness's real CDP, tab selection, mouse and keyboard helpers. Browser Harness owns the connection and daemon; our code adds scoped accessibility lookup, committed property checks, saving, text creation and node smoke checks. Its core is not copied or modified.
 
-## 使用 SDK
+```sh
+uv pip install -r requirements-harness.txt
+```
 
-Codex 内置浏览器可以导入 `sdk.mjs` 的 `fromCodexTab(tab)`；原生 CDP 通道使用 `raw-cdp.mjs` 的 `fromCodexRawTab(tab)`。不需要复制登录信息。
+Use an already authorized Browser Harness connection. See the [integration guide](skills/effectmaker/references/browser-harness.md). The Codex in-app browser and standalone Playwright adapters remain available. A Codex tab handle is not a Browser Harness websocket endpoint.
 
-独立 Node 脚本安装 Playwright 后，可调用 `cdp.mjs` 的 `connectCDP()`，连接已授权的本机调试端口。仓库设为 private，包也标记为 `private: true`，不会被误发到 npm。
+## Validation
+
+- English live editor: text creation, rename, visibility, cleanup, size change/restoration, save and Math/Add creation/undo.
+- English catalog: 79 visible node names observed.
+- Historical Chinese UI: 79 node creation/undo checks and 31 SDK operation checks (including restoration steps).
+- Real temporary Chromium: Playwright/CDP and Browser Harness integration tests passed, including scoped numeric entry, bounds and invalid/ambiguous target rejection.
+
+These are scoped checks, not a claim that all node execution semantics, AI generation, phone performance or publishing were verified. Historical evidence keeps its original Chinese labels.
+
+## Run tests
 
 ```sh
 npm install --no-save playwright
 npm test
+# Include the Browser Harness integration test:
+HARNESS_PYTHON=/absolute/path/to/venv/bin/python npm test
 ```
 
-CDP 集成测试启动独立临时浏览器，不使用个人配置。没有 Playwright 自带 Chromium 时，通过 `CHROMIUM_EXECUTABLE` 指定本机 Chrome 路径。测试端口为 19223。
+Set `CHROMIUM_EXECUTABLE` when using a local Chrome executable instead of Playwright's bundled Chromium. Tests create temporary browser profiles and use ports 19223 and 19224. Browser Harness is tested at 0.1.13; the Python test is explicitly skipped if `HARNESS_PYTHON` is unset.
+
+This repository and npm package are private. No credentials, cookies or browser profile data are included.

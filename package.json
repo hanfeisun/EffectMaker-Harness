@@ -1,6 +1,6 @@
 {
   "name": "effectmaker-skill-cdp-sdk",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "type": "module",
   "description": "YouTube Effect Maker skill and tested UI helpers with Playwright CDP and Codex browser adapters",
