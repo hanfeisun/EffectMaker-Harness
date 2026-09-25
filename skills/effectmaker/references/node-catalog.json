@@ -1,0 +1,634 @@
+[
+  {
+    "category": "逻辑",
+    "name": "且",
+    "created": true,
+    "undoRestored": true,
+    "nodeHelp": "- button \"关闭\":\n  - generic: x\n- generic: 检查第一个输入值和第二个输入值是否都为真\n- generic: 其他名称：&&\n- button \"添加节点\":\n  - generic: 添加节点\n- paragraph: 输入\n- generic: 输入值 1（布尔值）\n- generic: 要比较的第一个条件\n- generic: 输入值 2（布尔值）\n- generic: 要比较的第二个条件\n- paragraph: 输出\n- generic: 结果（布尔值）\n- generic: 当两个输入值都为真时结果为真；当任一输入值为假时结果为假",
+    "executionTested": false
+  },
+  {
+    "category": "逻辑",
+    "name": "或",
+    "created": true,
+    "undoRestored": true,
+    "nodeHelp": "- button \"关闭\":\n  - generic: x\n- generic: 检查第一个输入值或第二个输入值是否为真\n- generic: 其他名称：||\n- button \"添加节点\":\n  - generic: 添加节点\n- paragraph: 输入\n- generic: 输入值 1（布尔值）\n- generic: 要比较的第一个条件\n- generic: 输入值 2（布尔值）\n- generic: 要比较的第二个条件\n- paragraph: 输出\n- generic: 结果（布尔值）\n- generic: 当任一输入值为真时结果为真；当两个输入值都为假时结果为假",
+    "executionTested": false
+  },
+  {
+    "category": "逻辑",
+    "name": "非",
+    "created": true,
+    "undoRestored": true,
+    "nodeHelp": "- button \"关闭\":\n  - generic: x\n- generic: 将布尔值作为输入，并输出相反的值。将 true 更改为 false，将 false 更改为 true。\n- generic: 其他名称：反转、取反\n- button \"添加节点\":\n  - generic: 添加节点\n- paragraph: 输入\n- generic: 输入（布尔值）\n- generic: 要更改的布尔值\n- paragraph: 输出\n- generic: 结果（布尔值）\n- generic: 相反的布尔值",
+    "executionTested": false
+  },
+  {
+    "category": "逻辑",
+    "name": "等于",
+    "created": true,
+    "undoRestored": true,
+    "nodeHelp": "- button \"关闭\":\n  - generic: x\n- generic: 检查输入值是否相同\n- generic: 其他名称：相同, 等价, ==\n- button \"添加节点\":\n  - generic: 添加节点\n- paragraph: 数据类型\n- generic: 数值, 2D 矢量, 3D 矢量, 布尔值, 文字, 颜色\n- paragraph: 输入\n- generic: 输入值 1（所选数据类型）\n- generic: 要比较的第一个值\n- generic: 输入值 2（所选数据类型）\n- generic: 要比较的第二个值\n- paragraph: 输出\n- generic: 结果（布尔值）\n- generic: 当输入值相同时结果为真；当输入值不同时结果为假",
+    "executionTested": false
+  },
+  {
+    "category": "逻辑",
+    "name": "不等于",
+    "created": true,
+    "undoRestored": true,
+    "nodeHelp": "- button \"关闭\":\n  - generic: x\n- generic: 检查输入值是否不同\n- generic: 其他名称：不同, !=\n- button \"添加节点\":\n  - generic: 添加节点\n- paragraph: 数据类型\n- generic: 数值, 2D 矢量, 3D 矢量, 布尔值, 文字, 颜色\n- paragraph: 输入\n- generic: 输入值 1（所选数据类型）\n- generic: 要比较的第一个值\n- generic: 输入值 2（所选数据类型）\n- generic: 要比较的第二个值\n- paragraph: 输出\n- generic: 结果（布尔值）\n- generic: 当输入值不同时结果为真；当输入值相同时结果为假",
+    "executionTested": false
+  },
+  {
+    "category": "逻辑",
+    "name": "大于",
+    "created": true,
+    "undoRestored": true,
+    "nodeHelp": "- button \"关闭\":\n  - generic: x\n- generic: 检查第一个输入值是否大于第二个输入值\n- generic: 其他名称：>\n- button \"添加节点\":\n  - generic: 添加节点\n- paragraph: 输入\n- generic: 输入值 1（数值）\n- generic: 要比较的第一个值\n- generic: 输入值 2（数值）\n- generic: 要比较的第二个值\n- paragraph: 输出\n- generic: 结果（布尔值）\n- generic: 当第一个输入值大于第二个输入值时结果为真；当第一个输入值小于第二个输入值时结果为假",
+    "executionTested": false
+  },
+  {
+    "category": "逻辑",
+    "name": "小于",
+    "created": true,
+    "undoRestored": true,
+    "nodeHelp": "- button \"关闭\":\n  - generic: x\n- generic: 检查第一个输入值是否小于第二个输入值\n- generic: 其他名称：<\n- button \"添加节点\":\n  - generic: 添加节点\n- paragraph: 输入\n- generic: 输入值 1（数值）\n- generic: 要比较的第一个值\n- generic: 输入值 2（数值）\n- generic: 要比较的第二个值\n- paragraph: 输出\n- generic: 结果（布尔值）\n- generic: 当第一个输入值小于第二个输入值时结果为真；当第一个输入值大于第二个输入值时结果为假",
+    "executionTested": false
+  },
+  {
+    "category": "逻辑",
+    "name": "小于或等于",
+    "created": true,
+    "undoRestored": true,
+    "nodeHelp": "- button \"关闭\":\n  - generic: x\n- generic: 检查第一个输入值是否小于或等于第二个输入值\n- generic: 其他名称：≤\n- button \"添加节点\":\n  - generic: 添加节点\n- paragraph: 输入\n- generic: 输入值 1（数值）\n- generic: 要比较的第一个值\n- generic: 输入值 2（数值）\n- generic: 要比较的第二个值\n- paragraph: 输出\n- generic: 结果（布尔值）\n- generic: 当第一个输入值小于或等于第二个输入值时结果为真；当第一个输入值大于第二个输入值时结果为假",
+    "executionTested": false
+  },
+  {
+    "category": "逻辑",
+    "name": "大于或等于",
+    "created": true,
+    "undoRestored": true,
+    "nodeHelp": "- button \"关闭\":\n  - generic: x\n- generic: 检查第一个输入值是否大于或等于第二个输入值\n- generic: 其他名称：≥\n- button \"添加节点\":\n  - generic: 添加节点\n- paragraph: 输入\n- generic: 输入值 1（数值）\n- generic: 要比较的第一个值\n- generic: 输入值 2（数值）\n- generic: 要比较的第二个值\n- paragraph: 输出\n- generic: 结果（布尔值）\n- generic: 当第一个输入值大于或等于第二个输入值时结果为真；当第一个输入值小于第二个输入值时结果为假",
+    "executionTested": false
+  },
+  {
+    "category": "逻辑",
+    "name": "对象重叠",
+    "created": true,
+    "undoRestored": true,
+    "nodeHelp": "- button \"关闭\":\n  - generic: x\n- generic: 检查两个对象是否在屏幕上重叠。将所有对象视为存在于 2D 平面上。\n- button \"添加节点\":\n  - generic: 添加节点\n- paragraph: 输入\n- generic: 对象 1（对象）\n- generic: 要检查的第一个对象\n- generic: 对象 2（对象）\n- generic: 要检查的第二个对象\n- paragraph: 输出\n- generic: 重叠（布尔值）\n- generic: 如果两个对象重叠，则为 true；否则为 false",
+    "executionTested": false
+  },
+  {
+    "category": "逻辑",
+    "name": "对象包含位置",
+    "created": true,
+    "undoRestored": true,
+    "nodeHelp": "- button \"关闭\":\n  - generic: x\n- generic: 以屏幕位置作为输入（例如来自 On Tap 节点），如果该位置位于指定对象的边界内，则执行下一个节点。这有助于确定用户是否与屏幕上的特定元素进行了互动。\n- button \"添加节点\":\n  - generic: 添加节点\n- paragraph: 输入\n- generic: 对象（对象）\n- generic: 屏幕上显示的输入对象。\n- generic: 位置（2D 矢量）\n- generic: 输入位置，该位置可能包含在输入对象中，也可能不包含在输入对象中。\n- paragraph: 输出\n- generic: 包含（布尔值）\n- generic: 如果输入点包含在屏幕上的输入对象中，则输出 true。否则输出 false。",
+    "executionTested": false
+  },
+  {
+    "category": "逻辑",
+    "name": "文本包含",
+    "created": true,
+    "undoRestored": true,
+    "nodeHelp": "- button \"关闭\":\n  - generic: x\n- generic: 检查文本是否包含特定搜索字词。例如，检查 'apple pie' 是否包含 'apple' 时会输出 true。\n- generic: 其他名称：包含, 存在, 查找, 搜索, 字符串包含\n- button \"添加节点\":\n  - generic: 添加节点\n- paragraph: 输入\n- generic: 文字（文字）\n- generic: 要在其中进行搜索的文本\n- generic: 搜索文本（文字）\n- generic: 要搜索的文本\n- paragraph: 输出\n- generic: 包含（布尔值）\n- generic: 如果找到搜索字词，则为 true；否则为 false",
+    "executionTested": false
+  },
+  {
+    "category": "逻辑",
+    "name": "列表包含",
+    "created": true,
+    "undoRestored": true,
+    "nodeHelp": "- button \"关闭\":\n  - generic: x\n- generic: 检查列表中是否包含特定项。例如，检查 ['apple', 'pie'] 是否包含 'apple'，输出 True。\n- generic: 其他名称：包含, 存在, 查找, 搜索\n- button \"添加节点\":\n  - generic: 添加节点\n- paragraph: 数据类型\n- generic: 布尔值, 数值, 文字, 2D 矢量, 3D 矢量, 颜色, 素材资源\n- paragraph: 输入\n- generic: 列表（所选数据类型）\n- generic: 要在其中搜索的列表。\n- generic: 值（所选数据类型）\n- generic: 要搜索的值\n- paragraph: 输出\n- generic: 包含（布尔值）\n- generic: 如果列表中包含该项，则返回 True，否则返回 False。",
+    "executionTested": false
+  },
+  {
+    "category": "控制流",
+    "name": "如果",
+    "created": true,
+    "undoRestored": true,
+    "nodeHelp": "- button \"关闭\":\n  - generic: x\n- generic: 根据是否满足条件来运行节点\n- generic: 其他名称：条件\n- button \"添加节点\":\n  - generic: 添加节点\n- paragraph: 输入\n- generic: 启动\n- generic: 开始运行此节点\n- generic: 条件（布尔值）\n- generic: 默认为真，直到与其他节点连接\n- paragraph: 输出\n- generic: \"True\"\n- generic: 如果条件为真，则运行连接的节点\n- generic: \"False\"\n- generic: 如果条件为假，则运行连接的节点",
+    "executionTested": false
+  },
+  {
+    "category": "控制流",
+    "name": "限制器",
+    "created": true,
+    "undoRestored": true,
+    "nodeHelp": "- button \"关闭\":\n  - generic: x\n- generic: 限制连接的节点可以运行的次数。达到触发次数上限后，在重置之前将不会再次运行。\n- generic: 其他名称：执行一次, 执行 N 次, 流程控制\n- button \"添加节点\":\n  - generic: 添加节点\n- paragraph: 输入\n- generic: 启动\n- generic: 开始运行此节点\n- generic: 重置\n- generic: 将计数还原为 0\n- generic: 触发上限（数值）\n- generic: “On 触发”事件可运行的最大次数\n- paragraph: 输出\n- generic: On 触发\n- generic: 如果计数未达到触发上限，则运行连接的节点\n- generic: 重置后\n- generic: 在计数重置后运行连接的节点\n- generic: 计数（数值）\n- generic: 节点当前已运行的次数。每次运行“On 触发”时，计数都会递增。",
+    "executionTested": false
+  },
+  {
+    "category": "控制流",
+    "name": "对于每一个",
+    "created": true,
+    "undoRestored": true,
+    "nodeHelp": "- button \"关闭\":\n  - generic: x\n- generic: 遍历数据列表，并为列表中的每个项目触发相连的节点\n- generic: 其他名称：loop\n- button \"添加节点\":\n  - generic: 添加节点\n- paragraph: 数据类型\n- generic: 布尔值, 数值, 文字, 2D 矢量, 3D 矢量, 颜色, 素材资源\n- paragraph: 输入\n- generic: 启动\n- generic: 开始运行此节点\n- generic: 列表（所选数据类型）\n- generic: 待遍历的列表\n- paragraph: 输出\n- generic: 执行\n- generic: 逐项执行列表中的连接节点\n- generic: 值（所选数据类型）\n- generic: 当前正在处理的列表值\n- generic: 索引（数值）\n- generic: 当前正在处理的列表索引（从 0 开始的位置编号）\n- generic: 最后\n- generic: 在所有迭代完成后运行连接的节点",
+    "executionTested": false
+  },
+  {
+    "category": "控制流",
+    "name": "For 循环",
+    "created": true,
+    "undoRestored": true,
+    "nodeHelp": "- button \"关闭\":\n  - generic: x\n- generic: 从 0 开始迭代，直到达到指定的限制（不含）\n- generic: 其他名称：loop\n- button \"添加节点\":\n  - generic: 添加节点\n- paragraph: 数据类型\n- generic: 布尔值, 数值, 文字, 2D 矢量, 3D 矢量, 颜色, 素材资源\n- paragraph: 输入\n- generic: 启动\n- generic: 开始运行此节点\n- generic: 开始（数值）\n- generic: 循环的初始索引\n- generic: 结束（数值）\n- generic: 循环的结束索引（不含）\n- generic: 步骤（数值）\n- generic: 循环每次迭代后索引的增量。\n- paragraph: 输出\n- generic: 执行\n- generic: 为循环的每次迭代执行连接节点\n- generic: 索引（数值）\n- generic: 当前正在处理的列表索引（从 0 开始的位置编号）\n- generic: 最后\n- generic: 在所有迭代完成后运行连接的节点",
+    "executionTested": false
+  },
+  {
+    "category": "控制流",
+    "name": "延迟",
+    "created": true,
+    "undoRestored": true,
+    "nodeHelp": "- button \"关闭\":\n  - generic: x\n- generic: 等待指定时间后再运行连接的节点\n- generic: 其他名称：等待, 暂停, 计时器\n- button \"添加节点\":\n  - generic: 添加节点\n- paragraph: 输入\n- generic: 启动\n- generic: 开始运行此节点\n- generic: 时长（数值）\n- generic: 运行下一个节点前需要等待的秒数\n- paragraph: 输出\n- generic: 下一个\n- generic: 在延迟结束后运行连接的节点",
+    "executionTested": false
+  },
+  {
+    "category": "控制流",
+    "name": "重置状态",
+    "created": true,
+    "undoRestored": true,
+    "nodeHelp": "- button \"关闭\":\n  - generic: x\n- generic: 将特效中的所有对象和变量恢复为初始值，然后运行所有“重置时”触发器\n- generic: 其他名称：重启\n- button \"添加节点\":\n  - generic: 添加节点\n- paragraph: 输入\n- generic: 启动\n- generic: 开始运行此节点",
+    "executionTested": false
+  },
+  {
+    "category": "控制流",
+    "name": "脉冲",
+    "created": true,
+    "undoRestored": true,
+    "nodeHelp": "- button \"关闭\":\n  - generic: x\n- generic: 启动后，按设置的时间间隔重复运行连接的节点。例如，将间隔设为 2.0 后，系统会每隔 2 秒运行一次连接的节点，直到停止，从而保持动画或游戏循环不断重复。\n- generic: 其他名称：计时器, 间隔, 重复触发器\n- button \"添加节点\":\n  - generic: 添加节点\n- paragraph: 输入\n- generic: 启动\n- generic: 启动间隔计时器\n- generic: 停止\n- generic: 停止间隔计时器\n- generic: 间隔时间（数值）\n- generic: 每次重复之间的时间间隔（以秒为单位）\n- paragraph: 输出\n- generic: 开始时\n- generic: 当计时器启动时，运行连接的节点\n- generic: 脉冲时\n- generic: 每当间隔结束时，重复运行连接的节点\n- generic: 停止时\n- generic: 当计时器停止时，运行连接的节点",
+    "executionTested": false
+  },
+  {
+    "category": "控制流",
+    "name": "切换",
+    "created": true,
+    "undoRestored": true,
+    "nodeHelp": "- button \"关闭\":\n  - generic: x\n- generic: 每次运行时，在两个相连的输出之间交替切换。例如，它会先运行“开关 A”，再运行“开关 B”，如此周而复始。\n- generic: 其他名称：交替, A/B 开关, 锁存\n- button \"添加节点\":\n  - generic: 添加节点\n- paragraph: 输入\n- generic: 切换\n- generic: 从开关 A 开始，运行节点并切换其激活状态\n- generic: 重置\n- generic: 将状态重置为 A\n- paragraph: 输出\n- generic: 开关 A\n- generic: 在第 1 次、第 3 次等奇数次运行时，执行所连接的节点\n- generic: 开关 B\n- generic: 在第 2 次、第 4 次等偶数次运行时，执行所连接的节点\n- generic: Is A（布尔值）\n- generic: 如果最后一次运行的是输出 A，则为 True，否则为 False",
+    "executionTested": false
+  },
+  {
+    "category": "控制流",
+    "name": "序列",
+    "created": true,
+    "undoRestored": true,
+    "nodeHelp": "- button \"关闭\":\n  - generic: x\n- generic: 按顺序运行已连接的输出节点。可以添加或移除输出节点。\n- generic: 其他名称：序列\n- button \"添加节点\":\n  - generic: 添加节点\n- paragraph: 输入\n- generic: 启动\n- generic: 开始运行此节点\n- paragraph: 输出\n- generic: 第 1 步\n- generic: 在输入触发器运行后运行\n- generic: 第 2 步\n- generic: 在上一条输出之后运行",
+    "executionTested": false
+  },
+  {
+    "category": "数学",
+    "name": "加",
+    "created": true,
+    "undoRestored": true,
+    "nodeHelp": "- button \"关闭\":\n  - generic: x\n- generic: 将第一个输入值和第二个输入值相加\n- generic: 其他名称：求和, 加法, +\n- button \"添加节点\":\n  - generic: 添加节点\n- paragraph: 数据类型\n- generic: 数值, 2D 矢量, 3D 矢量\n- paragraph: 输入\n- generic: 输入值 1（所选数据类型）\n- generic: 第一个加数\n- generic: 输入值 2（所选数据类型）\n- generic: 第二个加数\n- paragraph: 输出\n- generic: 结果（所选数据类型）\n- generic: 输入值之和",
+    "executionTested": false
+  },
+  {
+    "category": "数学",
+    "name": "减去",
+    "created": true,
+    "undoRestored": true,
+    "nodeHelp": "- button \"关闭\":\n  - generic: x\n- generic: 从第一个输入值中减去第二个输入值\n- generic: 其他名称：差值, 减法, -\n- button \"添加节点\":\n  - generic: 添加节点\n- paragraph: 数据类型\n- generic: 数值, 2D 矢量, 3D 矢量\n- paragraph: 输入\n- generic: 输入值 1（所选数据类型）\n- generic: 被减数\n- generic: 输入值 2（所选数据类型）\n- generic: 从输入值 1 中减去的数\n- paragraph: 输出\n- generic: 结果（所选数据类型）\n- generic: 输入值之差",
+    "executionTested": false
+  },
+  {
+    "category": "数学",
+    "name": "正片叠底",
+    "created": true,
+    "undoRestored": true,
+    "nodeHelp": "- button \"关闭\":\n  - generic: x\n- generic: 将第一个输入值与第二个输入值相乘\n- generic: 其他名称：乘积, 倍数, x\n- button \"添加节点\":\n  - generic: 添加节点\n- paragraph: 数据类型\n- generic: 数值, 2D 矢量, 3D 矢量\n- paragraph: 输入\n- generic: 输入值 1（所选数据类型）\n- generic: 第一个乘数\n- generic: 输入值 2（所选数据类型）\n- generic: 第二个乘数\n- paragraph: 输出\n- generic: 结果（所选数据类型）\n- generic: 输入值的乘积",
+    "executionTested": false
+  },
+  {
+    "category": "数学",
+    "name": "除",
+    "created": true,
+    "undoRestored": true,
+    "nodeHelp": "- button \"关闭\":\n  - generic: x\n- generic: 用第一个输入值除以第二个输入值\n- generic: 其他名称：商, /\n- button \"添加节点\":\n  - generic: 添加节点\n- paragraph: 数据类型\n- generic: 数值, 2D 矢量, 3D 矢量\n- paragraph: 输入\n- generic: 输入值 1（所选数据类型）\n- generic: 被除数\n- generic: 输入值 2（所选数据类型）\n- generic: 输入值 1 的除数\n- paragraph: 输出\n- generic: 结果（所选数据类型）\n- generic: 输入值相除的结果",
+    "executionTested": false
+  },
+  {
+    "category": "数学",
+    "name": "取模",
+    "created": true,
+    "undoRestored": true,
+    "nodeHelp": "- button \"关闭\":\n  - generic: x\n- generic: 计算第一个输入值除以第二个输入值的余数\n- generic: 其他名称：余数, %\n- button \"添加节点\":\n  - generic: 添加节点\n- paragraph: 数据类型\n- generic: 数值, 2D 矢量, 3D 矢量\n- paragraph: 输入\n- generic: 输入值 1（所选数据类型）\n- generic: 被除数\n- generic: 输入值 2（所选数据类型）\n- generic: 输入值 1 的除数\n- paragraph: 输出\n- generic: 结果（所选数据类型）\n- generic: 第一个输入值除以第二个输入值后的余数",
+    "executionTested": false
+  },
+  {
+    "category": "数学",
+    "name": "绝对值",
+    "created": true,
+    "undoRestored": true,
+    "nodeHelp": "- button \"关闭\":\n  - generic: x\n- generic: 找出输入值的绝对值\n- generic: 其他名称：abs\n- button \"添加节点\":\n  - generic: 添加节点\n- paragraph: 数据类型\n- generic: 数值, 2D 矢量, 3D 矢量\n- paragraph: 输入\n- generic: 输入（所选数据类型）\n- generic: 输入值\n- paragraph: 输出\n- generic: 结果（所选数据类型）\n- generic: 输入值的绝对值",
+    "executionTested": false
+  },
+  {
+    "category": "数学",
+    "name": "最小值",
+    "created": true,
+    "undoRestored": true,
+    "nodeHelp": "- button \"关闭\":\n  - generic: x\n- generic: 找出两个输入值中较小的值\n- generic: 其他名称：最小值, 向下取整\n- button \"添加节点\":\n  - generic: 添加节点\n- paragraph: 数据类型\n- generic: 数值, 2D 矢量, 3D 矢量\n- paragraph: 输入\n- generic: 输入值 1（所选数据类型）\n- generic: 要比较的第一个值\n- generic: 输入值 2（所选数据类型）\n- generic: 要比较的第二个值\n- paragraph: 输出\n- generic: 最小值（所选数据类型）\n- generic: 两个输入值中较小的值。 对于向量，新向量将包含每组中的最小数字。",
+    "executionTested": false
+  },
+  {
+    "category": "数学",
+    "name": "最大值",
+    "created": true,
+    "undoRestored": true,
+    "nodeHelp": "- button \"关闭\":\n  - generic: x\n- generic: 找出两个输入值中较大的值\n- generic: 其他名称：最大值, 向上取整\n- button \"添加节点\":\n  - generic: 添加节点\n- paragraph: 数据类型\n- generic: 数值, 2D 矢量, 3D 矢量\n- paragraph: 输入\n- generic: 输入值 1（所选数据类型）\n- generic: 要比较的第一个值\n- generic: 输入值 2（所选数据类型）\n- generic: 要比较的第二个值\n- paragraph: 输出\n- generic: 最大值（所选数据类型）\n- generic: 两个输入值中较大的值。 对于向量，新向量将包含每组中的最大数字。",
+    "executionTested": false
+  },
+  {
+    "category": "数学",
+    "name": "正弦",
+    "created": true,
+    "undoRestored": true,
+    "nodeHelp": "- button \"关闭\":\n  - generic: x\n- generic: 计算输入角度的正弦。\n- generic: 其他名称：sin\n- button \"添加节点\":\n  - generic: 添加节点\n- paragraph: 输入\n- generic: 角度（数值）\n- generic: 要计算正弦的弧度值。\n- paragraph: 输出\n- generic: 结果（数值）\n- generic: 正弦计算结果。",
+    "executionTested": false
+  },
+  {
+    "category": "数学",
+    "name": "余弦",
+    "created": true,
+    "undoRestored": true,
+    "nodeHelp": "- button \"关闭\":\n  - generic: x\n- generic: 计算输入角度的余弦。\n- generic: 其他名称：cos\n- button \"添加节点\":\n  - generic: 添加节点\n- paragraph: 输入\n- generic: 角度（数值）\n- generic: 要计算余弦的弧度值。\n- paragraph: 输出\n- generic: 结果（数值）\n- generic: 余弦计算结果。",
+    "executionTested": false
+  },
+  {
+    "category": "数学",
+    "name": "正切",
+    "created": true,
+    "undoRestored": true,
+    "nodeHelp": "- button \"关闭\":\n  - generic: x\n- generic: 计算输入角度的正切。\n- generic: 其他名称：tan\n- button \"添加节点\":\n  - generic: 添加节点\n- paragraph: 输入\n- generic: 角度（数值）\n- generic: 要计算正切的弧度值。\n- paragraph: 输出\n- generic: 结果（数值）\n- generic: 正切计算结果。",
+    "executionTested": false
+  },
+  {
+    "category": "数学",
+    "name": "限制取值范围",
+    "created": true,
+    "undoRestored": true,
+    "nodeHelp": "- button \"关闭\":\n  - generic: x\n- generic: 将值限制在指定的最小值和最大值之间。 如果值在该范围内，则输出相同的值。如果值超出上限，则输出最大值。如果值低于下限，则输出最小值。\n- generic: 其他名称：重新映射\n- button \"添加节点\":\n  - generic: 添加节点\n- paragraph: 数据类型\n- generic: 数值, 2D 矢量, 3D 矢量\n- paragraph: 输入\n- generic: 输入（所选数据类型）\n- generic: 要限制的值\n- generic: 最小值（数值）\n- generic: 输出的最小值\n- generic: 最大值（数值）\n- generic: 输出的最大值\n- paragraph: 输出\n- generic: 结果（所选数据类型）\n- generic: 限制后的值",
+    "executionTested": false
+  },
+  {
+    "category": "数学",
+    "name": "随机数",
+    "created": true,
+    "undoRestored": true,
+    "nodeHelp": "- button \"关闭\":\n  - generic: x\n- generic: 在指定范围内生成一个随机数\n- generic: 其他名称：伪随机, 随机数生成器\n- button \"添加节点\":\n  - generic: 添加节点\n- paragraph: 输入\n- generic: 最小值（数值）\n- generic: 范围的起始值（含此值）\n- generic: 最大值（数值）\n- generic: 范围的结束值（不包含此值）\n- paragraph: 输出\n- generic: 值（数值）\n- generic: 生成的随机数",
+    "executionTested": false
+  },
+  {
+    "category": "数学",
+    "name": "插值",
+    "created": true,
+    "undoRestored": true,
+    "nodeHelp": "- button \"关闭\":\n  - generic: x\n- generic: 计算曲线上两个数值之间的特定点的值（即选择一条线上的某个点）。通常用于在动画中创建过渡特效。\n- generic: 其他名称：线性插值\n- button \"添加节点\":\n  - generic: 添加节点\n- paragraph: 输入\n- generic: 起始值（数值）\n- generic: 插值的起始值\n- generic: 结束值（数值）\n- generic: 插值的结束值\n- generic: 进度步值（数值）\n- generic: 用 0（起点）到 1.0（终点）之间的数值表示过渡的进度 超出 0-1.0 范围的值将自动调整为最接近的有效值\n- generic: 曲线（选项）\n- generic: 计算起始状态到结束状态之间的过渡过程\n- paragraph: 输出\n- generic: 值（数值）\n- generic: 在当前进度步值上计算出的数值",
+    "executionTested": false
+  },
+  {
+    "category": "数学",
+    "name": "重新映射",
+    "created": true,
+    "undoRestored": true,
+    "nodeHelp": "- button \"关闭\":\n  - generic: x\n- generic: 将数字或向量从一个范围线性缩放到另一个范围。超出这些范围的输入仍会按比例转换。这对于转换坐标非常有用（例如，将“拖动”节点的屏幕坐标转换为“绘制”节点的图像画布坐标）。\n- generic: 其他名称：比例\n- button \"添加节点\":\n  - generic: 添加节点\n- paragraph: 数据类型\n- generic: 数值, 2D 矢量, 3D 矢量\n- paragraph: 输入\n- generic: 输入（所选数据类型）\n- generic: 要转换的数字或向量\n- generic: 输入最小值（所选数据类型）\n- generic: 输入范围的最小值\n- generic: 输入最大值（所选数据类型）\n- generic: 输入范围的最大值\n- generic: 输出最小值（所选数据类型）\n- generic: 输出范围的最小值\n- generic: 输出最大值（所选数据类型）\n- generic: 输出范围的最大值\n- paragraph: 输出\n- generic: 输出（所选数据类型）\n- generic: 已转换至新范围的数字或向量",
+    "executionTested": false
+  },
+  {
+    "category": "数学",
+    "name": "平方根",
+    "created": true,
+    "undoRestored": true,
+    "nodeHelp": "- button \"关闭\":\n  - generic: x\n- generic: 计算输入值的平方根\n- generic: 其他名称：sqrt\n- button \"添加节点\":\n  - generic: 添加节点\n- paragraph: 数据类型\n- generic: 数值, 2D 矢量, 3D 矢量\n- paragraph: 输入\n- generic: 输入（所选数据类型）\n- generic: 要计算平方根的值\n- paragraph: 输出\n- generic: 结果（所选数据类型）\n- generic: 平方根计算结果",
+    "executionTested": false
+  },
+  {
+    "category": "数学",
+    "name": "幂",
+    "created": true,
+    "undoRestored": true,
+    "nodeHelp": "- button \"关闭\":\n  - generic: x\n- generic: 计算底数的指数次幂\n- generic: 其他名称：次方, pow, **\n- button \"添加节点\":\n  - generic: 添加节点\n- paragraph: 数据类型\n- generic: 数值, 2D 矢量, 3D 矢量\n- paragraph: 输入\n- generic: 基本（所选数据类型）\n- generic: 底数\n- generic: 指数（所选数据类型）\n- generic: 指数值\n- paragraph: 输出\n- generic: 结果（所选数据类型）\n- generic: 底数的指数幂运算结果",
+    "executionTested": false
+  },
+  {
+    "category": "数学",
+    "name": "取整",
+    "created": true,
+    "undoRestored": true,
+    "nodeHelp": "- button \"关闭\":\n  - generic: x\n- generic: 将输入值取整到指定的精度（默认为整数）\n- generic: 其他名称：向上取整, 向下取整\n- button \"添加节点\":\n  - generic: 添加节点\n- paragraph: 数据类型\n- generic: 数值, 2D 矢量, 3D 矢量\n- paragraph: 输入\n- generic: 输入（所选数据类型）\n- generic: 要更改的值\n- generic: 步长（数值）\n- generic: 通过设置要取整到的增量来确定精度。例如，1 表示整数，10 表示十的倍数。\n- generic: 舍入（选项）\n- generic: 确定值的取整方式\n- generic: 向上取整\n- generic: 向上取整到大于或等于相应值的倍数\n- generic: 向下取整\n- generic: 向下取整到小于或等于输入值的倍数\n- generic: 四舍五入\n- generic: 取整到最接近的步长倍数\n- paragraph: 输出\n- generic: 结果（所选数据类型）\n- generic: 取整后的值",
+    "executionTested": false
+  },
+  {
+    "category": "数学",
+    "name": "叉积",
+    "created": true,
+    "undoRestored": true,
+    "nodeHelp": "- button \"关闭\":\n  - generic: x\n- generic: 通过输入的两个 3D 向量，计算出一个与之垂直（正交）的 3D 向量。例如，将 [1, 0, 0]（右）和 [0, 1, 0]（上）进行叉乘，输出 [0, 0, 1]（前）。\n- generic: 其他名称：矢量积, 有向面积积, 叉\n- button \"添加节点\":\n  - generic: 添加节点\n- paragraph: 输入\n- generic: 输入值 1（3D 矢量）\n- generic: 第一个 3D 矢量\n- generic: 输入值 2（3D 矢量）\n- generic: 第二个 3D 矢量\n- paragraph: 输出\n- generic: 结果（3D 矢量）\n- generic: 计算出的垂直 3D 矢量",
+    "executionTested": false
+  },
+  {
+    "category": "数学",
+    "name": "点积",
+    "created": true,
+    "undoRestored": true,
+    "nodeHelp": "- button \"关闭\":\n  - generic: x\n- generic: 计算两个 2D 或 3D 向量的点积（标量积）。常用于判断两个向量在方向上的趋同程度。例如，如果两个向量相互垂直，则输出 0，如果两个向量平行且指向相同方向，则输出 1。\n- generic: 其他名称：标量积, 内积, 点乘\n- button \"添加节点\":\n  - generic: 添加节点\n- paragraph: 数据类型\n- generic: 2D 矢量, 3D 矢量\n- paragraph: 输入\n- generic: 输入值 1（所选数据类型）\n- generic: 第一个向量\n- generic: 输入值 2（所选数据类型）\n- generic: 第二个向量\n- paragraph: 输出\n- generic: 结果（数值）\n- generic: 计算出的点积",
+    "executionTested": false
+  },
+  {
+    "category": "数学",
+    "name": "列表范围",
+    "created": true,
+    "undoRestored": true,
+    "nodeHelp": "- button \"关闭\":\n  - generic: x\n- generic: 找出列表中最大数字与最小数字之差。例如，输入 [1, 5, 3, 10, 2] 会输出 9。如果输入列表为空或仅有一项，则输出 0。\n- generic: 其他名称：极差, 统计离散度\n- button \"添加节点\":\n  - generic: 添加节点\n- paragraph: 输入\n- generic: 值（数值）\n- generic: 要计算极差的数字列表\n- paragraph: 输出\n- generic: 范围（数值）\n- generic: 计算出的极差值",
+    "executionTested": false
+  },
+  {
+    "category": "数学",
+    "name": "平均值",
+    "created": true,
+    "undoRestored": true,
+    "nodeHelp": "- button \"关闭\":\n  - generic: x\n- generic: 计算数字或向量列表的均值（平均值）。例如，输入 [1, 2, 3, 4] 会输出 2.5。如果输入列表不包含数字或向量，则输出 0。\n- generic: 其他名称：均值\n- button \"添加节点\":\n  - generic: 添加节点\n- paragraph: 数据类型\n- generic: 数值, 2D 矢量, 3D 矢量\n- paragraph: 输入\n- generic: 值（所选数据类型）\n- generic: 用于计算平均值的数字或向量列表\n- paragraph: 输出\n- generic: 平均值（所选数据类型）\n- generic: 输入值的平均值",
+    "executionTested": false
+  },
+  {
+    "category": "数学",
+    "name": "中位数",
+    "created": true,
+    "undoRestored": true,
+    "nodeHelp": "- button \"关闭\":\n  - generic: x\n- generic: 找出数字列表的中间值。例如，输入 [3, 1, 2] 会输出 2。如果输入列表不包含数字，则输出 0。\n- generic: 其他名称：中间值, 第 50 百分位\n- button \"添加节点\":\n  - generic: 添加节点\n- paragraph: 输入\n- generic: 值（数值）\n- generic: 要计算中位数的数字列表\n- paragraph: 输出\n- generic: 中位数（数值）\n- generic: 输入列表的中位数值",
+    "executionTested": false
+  },
+  {
+    "category": "数学",
+    "name": "众数",
+    "created": true,
+    "undoRestored": true,
+    "nodeHelp": "- button \"关闭\":\n  - generic: x\n- generic: 找出列表中的最常见值。例如，输入 [1, 2, 2, 3, 3] 会输出 2。如果输入列表不包含数字，则输出 0。如果存在并列情况，则返回输入列表中遇到的第一个值。\n- generic: 其他名称：出现频率最高, 众数值\n- button \"添加节点\":\n  - generic: 添加节点\n- paragraph: 数据类型\n- generic: 数值, 2D 矢量, 3D 矢量, 布尔值, 文字, 颜色\n- paragraph: 输入\n- generic: 值（所选数据类型）\n- generic: 要查找众数的值列表\n- paragraph: 输出\n- generic: 众数（所选数据类型）\n- generic: 计算得到的众数值",
+    "executionTested": false
+  },
+  {
+    "category": "数学",
+    "name": "向量距离",
+    "created": true,
+    "undoRestored": true,
+    "nodeHelp": "- button \"关闭\":\n  - generic: x\n- generic: 计算两点（2D 或 3D）之间的直线距离。可用于检测物体之间的距离，根据距离触发互动，或动态调整特效的缩放比例。例如，[0, 0] 和 [3, 4] 之间的距离为 5。\n- generic: 其他名称：距离, 欧几里得距离, 邻近\n- button \"添加节点\":\n  - generic: 添加节点\n- paragraph: 数据类型\n- generic: 2D 矢量, 3D 矢量\n- paragraph: 输入\n- generic: 输入值 1（所选数据类型）\n- generic: 第一个点\n- generic: 输入值 2（所选数据类型）\n- generic: 第二个点\n- paragraph: 输出\n- generic: 距离（数值）\n- generic: 计算出的直线距离",
+    "executionTested": false
+  },
+  {
+    "category": "场景对象",
+    "name": "获取属性",
+    "created": true,
+    "undoRestored": true,
+    "nodeHelp": "- button \"关闭\":\n  - generic: x\n- generic: 获取对象当前的属性值\n- generic: 其他名称：检索\n- button \"添加节点\":\n  - generic: 添加节点\n- paragraph: 数据类型\n- generic: 对象, 素材资源\n- paragraph: 输入\n- generic: 对象（所选数据类型）\n- generic: 要获取属性的对象 选择一个对象即可查看属性选项\n- paragraph: 输出\n- generic: 属性\n- generic: 所选属性的值",
+    "executionTested": false
+  },
+  {
+    "category": "场景对象",
+    "name": "设置属性",
+    "created": true,
+    "undoRestored": true,
+    "nodeHelp": "- button \"关闭\":\n  - generic: x\n- generic: 更改对象的属性（如大小、可见性等）\n- generic: 其他名称：更改, 修改\n- button \"添加节点\":\n  - generic: 添加节点\n- paragraph: 数据类型\n- generic: 对象, 素材资源\n- paragraph: 输入\n- generic: 启动\n- generic: 开始运行此节点\n- generic: 对象（所选数据类型）\n- generic: 要更改属性的对象 选择一个对象即可查看属性选项\n- generic: 属性\n- generic: 要为所选属性设置的值\n- paragraph: 输出\n- generic: 下一个\n- generic: 在该节点之后运行连接的节点",
+    "executionTested": false
+  },
+  {
+    "category": "场景对象",
+    "name": "头部追踪",
+    "created": true,
+    "undoRestored": true,
+    "nodeHelp": "- button \"关闭\":\n  - generic: x\n- generic: 检测和跟踪人物的头部，输出其位置和旋转角度\n- generic: 其他名称：头部信号, 头部位置, 头部旋转角度, 头部追踪信息, 头部信息\n- button \"添加节点\":\n  - generic: 添加节点\n- paragraph: 输出\n- generic: 是否检测到（布尔值）\n- generic: 如果摄像头画面中至少可看到一个人的头部，则为 True；否则为 False。\n- generic: 屏幕位置（2D 矢量）\n- generic: 检测到的脸部中心的 2D 位置，测量单位为屏幕空间，以屏幕中心作为原点 (0,0)（X 值范围：-360 至 360；Y 值范围：-640 至 640）。\n- generic: 世界坐标（3D 矢量）\n- generic: 检测到的脸部中心的 3D 位置。此值是基于世界空间测量的，以 YouTube 特效工坊 3D 场景的中心作为原点 (0,0,0)。\n- generic: 旋转（3D 矢量）\n- generic: 检测到的头部的 3D 旋转角度。此值是基于相对于头部中心在 YouTube 特效工坊 3D 场景中的位置测量的。",
+    "executionTested": false
+  },
+  {
+    "category": "场景对象",
+    "name": "特效时间",
+    "created": true,
+    "undoRestored": true,
+    "nodeHelp": "- button \"关闭\":\n  - generic: x\n- generic: 提供自特效或录制开始后经过的时间，或两帧之间的时间\n- button \"添加节点\":\n  - generic: 添加节点\n- paragraph: 输出\n- generic: 特效时长（数值）\n- generic: 特效开始后经过的时间（以秒为单位）。\n- generic: 录制时长（数值）\n- generic: 录制开始后经过的时间（以秒为单位）。\n- generic: 帧间隔（数值）\n- generic: 上一帧与最新帧之间的时间间隔（以秒为单位）。",
+    "executionTested": false
+  },
+  {
+    "category": "数据",
+    "name": "过渡",
+    "created": true,
+    "undoRestored": true,
+    "nodeHelp": "- button \"关闭\":\n  - generic: x\n- generic: 在设定的时间内在两个值之间平滑过渡 通常用于动画特效，例如随时间改变不透明度\n- generic: 其他名称：按时间过渡\n- button \"添加节点\":\n  - generic: 添加节点\n- paragraph: 输入\n- generic: 启动\n- generic: 开始运行此节点\n- generic: 起始值（数值）\n- generic: 过渡的起始值\n- generic: 结束值（数值）\n- generic: 要过渡到的目标值\n- generic: 时长（数值）\n- generic: 从起点到终点所需的秒数\n- generic: 曲线（选项）\n- generic: 计算输出值，也就是值在起点到终点之间的变化情形 在动画中，用于控制设定时间内过渡的加速或减速效果\n- paragraph: 输出\n- generic: 开始时\n- generic: 在过渡开始时，运行连接的节点\n- generic: 变化时\n- generic: 在过渡期间的每次帧更新时，运行连接的节点\n- generic: 结束时\n- generic: 在过渡结束后，运行连接的节点\n- generic: 值（数值）\n- generic: 显示过渡进度的实时更新值。此数值会逐渐增加，直到达到结束值。",
+    "executionTested": false
+  },
+  {
+    "category": "数据",
+    "name": "获取变量",
+    "created": true,
+    "undoRestored": true,
+    "nodeHelp": "- button \"关闭\":\n  - generic: x\n- generic: 检索变量的当前值\n- button \"添加节点\":\n  - generic: 添加节点\n- paragraph: 输入\n- generic: 变量（）\n- generic: 要检索的变量\n- paragraph: 输出\n- generic: 值\n- generic: 变量的值，可以是单个值或列表，具体取决于其数据类型",
+    "executionTested": false
+  },
+  {
+    "category": "数据",
+    "name": "设置变量",
+    "created": true,
+    "undoRestored": true,
+    "nodeHelp": "- button \"关闭\":\n  - generic: x\n- generic: 更改变量的值\n- button \"添加节点\":\n  - generic: 添加节点\n- paragraph: 输入\n- generic: 启动\n- generic: 开始运行此节点\n- generic: 变量（）\n- generic: 要更改值的变量\n- generic: 值\n- generic: 变量要更改为的值\n- paragraph: 输出\n- generic: 下一个\n- generic: 在该节点之后运行连接的节点",
+    "executionTested": false
+  },
+  {
+    "category": "数据",
+    "name": "从列表中获取",
+    "created": true,
+    "undoRestored": true,
+    "nodeHelp": "- button \"关闭\":\n  - generic: x\n- generic: 从列表中的指定索引（位置）检索值\n- button \"添加节点\":\n  - generic: 添加节点\n- paragraph: 数据类型\n- generic: 布尔值, 数值, 文字, 2D 矢量, 3D 矢量, 颜色, 素材资源\n- paragraph: 输入\n- generic: 列表（所选数据类型）\n- generic: 要从中获取元素的列表\n- generic: 索引（数值）\n- generic: 要检索的索引（从 0 开始的位置编号）\n- paragraph: 输出\n- generic: 值（所选数据类型）\n- generic: 列表中指定索引（位置）的值",
+    "executionTested": false
+  },
+  {
+    "category": "数据",
+    "name": "在列表中替换",
+    "created": true,
+    "undoRestored": true,
+    "nodeHelp": "- button \"关闭\":\n  - generic: x\n- generic: 覆盖列表中指定索引（位置）的值\n- button \"添加节点\":\n  - generic: 添加节点\n- paragraph: 数据类型\n- generic: 布尔值, 数值, 文字, 2D 矢量, 3D 矢量, 颜色, 素材资源\n- paragraph: 输入\n- generic: 列表（所选数据类型）\n- generic: 要插入值的列表\n- generic: 索引（数值）\n- generic: 要检索的索引（从 0 开始的位置编号）\n- generic: 值（所选数据类型）\n- generic: 要为列表中的指定索引（位置）设置的值\n- paragraph: 输出\n- generic: 更新后的列表（所选数据类型）\n- generic: 更新后的列表，已在指定索引（位置）添加新值",
+    "executionTested": false
+  },
+  {
+    "category": "数据",
+    "name": "从列表中移除",
+    "created": true,
+    "undoRestored": true,
+    "nodeHelp": "- button \"关闭\":\n  - generic: x\n- generic: 从列表中的指定索引（位置）移除值\n- button \"添加节点\":\n  - generic: 添加节点\n- paragraph: 数据类型\n- generic: 布尔值, 数值, 文字, 2D 矢量, 3D 矢量, 颜色, 素材资源\n- paragraph: 输入\n- generic: 列表（所选数据类型）\n- generic: 要从中移除值的列表\n- generic: 索引（数值）\n- generic: 要移除的索引（从 0 开始的位置编号）\n- paragraph: 输出\n- generic: 更新后的列表（所选数据类型）\n- generic: 更新后的列表，已移除了指定值",
+    "executionTested": false
+  },
+  {
+    "category": "数据",
+    "name": "插入列表中",
+    "created": true,
+    "undoRestored": true,
+    "nodeHelp": "- button \"关闭\":\n  - generic: x\n- generic: 要插入值的列表\n- button \"添加节点\":\n  - generic: 添加节点\n- paragraph: 数据类型\n- generic: 布尔值, 数值, 文字, 2D 矢量, 3D 矢量, 颜色, 素材资源\n- paragraph: 输入\n- generic: 列表（所选数据类型）\n- generic: 要修改的列表\n- generic: 索引（数值）\n- generic: 要插入新值的索引（从 0 开始的位置编号）\n- generic: 值（所选数据类型）\n- generic: 要添加到列表中的值\n- paragraph: 输出\n- generic: 更新后的列表（所选数据类型）\n- generic: 更新后的列表，已在指定位置添加新值",
+    "executionTested": false
+  },
+  {
+    "category": "数据",
+    "name": "获取列表长度",
+    "created": true,
+    "undoRestored": true,
+    "nodeHelp": "- button \"关闭\":\n  - generic: x\n- generic: 返回列表的长度\n- generic: 其他名称：获取列表规模\n- button \"添加节点\":\n  - generic: 添加节点\n- paragraph: 输入\n- generic: 列表（所选数据类型）\n- generic: 要获取长度的列表\n- paragraph: 输出\n- generic: 长度（数值）\n- generic: 列表中的元素数量",
+    "executionTested": false
+  },
+  {
+    "category": "数据",
+    "name": "排序",
+    "created": true,
+    "undoRestored": true,
+    "nodeHelp": "- button \"关闭\":\n  - generic: x\n- generic: 根据所选顺序，对数字或文本列表进行排序。例如，将 [3, 1, 2] 按升序排序，输出 [1, 2, 3]。\n- generic: 其他名称：列表排序, 整理, 排名, 打乱顺序, 列表倒序, 首尾对调\n- button \"添加节点\":\n  - generic: 添加节点\n- paragraph: 数据类型\n- generic: 布尔值, 数值, 文字, 2D 矢量, 3D 矢量, 颜色, 素材资源\n- paragraph: 输入\n- generic: 列表（所选数据类型）\n- generic: 要排序的列表\n- generic: 排序类型（选项）\n- generic: 确定列表的排序方式\n- generic: 升序\n- generic: 从低到高\n- generic: 降序\n- generic: 从高到低\n- generic: 反向排序\n- generic: 与输入顺序相反\n- generic: 随机数\n- generic: 随机顺序\n- paragraph: 输出\n- generic: 已排序的列表（所选数据类型）\n- generic: 已排序的列表",
+    "executionTested": false
+  },
+  {
+    "category": "数据",
+    "name": "分解向量",
+    "created": true,
+    "undoRestored": true,
+    "nodeHelp": "- button \"关闭\":\n  - generic: x\n- generic: 将向量分解为独立的数值\n- generic: 其他名称：分解, 向量解包\n- button \"添加节点\":\n  - generic: 添加节点\n- paragraph: 数据类型\n- generic: 2D 矢量, 3D 矢量\n- paragraph: 输入\n- generic: 向量（所选数据类型）\n- generic: 待分解的向量\n- paragraph: 输出\n- generic: X（数值）\n- generic: 向量中的第一个数值\n- generic: Y（数值）\n- generic: 向量中的第二个数值\n- generic: Z（数值）\n- generic: 向量中的第三个数值",
+    "executionTested": false
+  },
+  {
+    "category": "数据",
+    "name": "合并为向量",
+    "created": true,
+    "undoRestored": true,
+    "nodeHelp": "- button \"关闭\":\n  - generic: x\n- generic: 将多个数值合并成一个向量\n- button \"添加节点\":\n  - generic: 添加节点\n- paragraph: 数据类型\n- generic: 2D 矢量, 3D 矢量\n- paragraph: 输入\n- generic: X（数值）\n- generic: 向量中的第一个数值\n- generic: Y（数值）\n- generic: 向量中的第二个数值\n- generic: Z（数值）\n- generic: 向量中的第三个数值\n- paragraph: 输出\n- generic: 向量（所选数据类型）\n- generic: 生成的向量",
+    "executionTested": false
+  },
+  {
+    "category": "数据",
+    "name": "数字转文本",
+    "created": true,
+    "undoRestored": true,
+    "nodeHelp": "- button \"关闭\":\n  - generic: x\n- generic: 将数字转换为文本\n- generic: 其他名称：to string, format\n- button \"添加节点\":\n  - generic: 添加节点\n- paragraph: 输入\n- generic: 数值（数值）\n- generic: 要更改的数字\n- generic: 小数位数（数值）\n- generic: 小数点后应显示的数字位数\n- generic: 舍入（选项）\n- generic: 确定数字的舍入方式\n- generic: 四舍五入\n- generic: 如果“小数位数”设为 0，则四舍五入到最接近的整数；否则四舍五入到指定的小数位\n- generic: 截断\n- generic: 移除所选小数位之后的所有数字，不进行舍入\n- paragraph: 输出\n- generic: 文字（文字）\n- generic: 已转换成文本的数字",
+    "executionTested": false
+  },
+  {
+    "category": "数据",
+    "name": "拆分颜色",
+    "created": true,
+    "undoRestored": true,
+    "nodeHelp": "- button \"关闭\":\n  - generic: x\n- generic: 将颜色拆分为相应的分量值\n- button \"添加节点\":\n  - generic: 添加节点\n- paragraph: 颜色空间\n- generic: RGB, HSV, HSL\n- generic: 颜色拆分格式\n- paragraph: 输入\n- generic: 颜色（颜色）\n- generic: 构建的颜色/要拆分的颜色\n- paragraph: 输出\n- generic: 颜色分量（所选颜色空间）（颜色）\n- generic: RGB：红色、绿色、蓝色 HSV：色调、饱和度、明度 HSL：色调、饱和度、亮度",
+    "executionTested": false
+  },
+  {
+    "category": "数据",
+    "name": "构建颜色",
+    "created": true,
+    "undoRestored": true,
+    "nodeHelp": "- button \"关闭\":\n  - generic: x\n- generic: 根据颜色分量值构建颜色。\n- button \"添加节点\":\n  - generic: 添加节点\n- paragraph: 颜色空间\n- generic: RGB, HSV, HSL\n- generic: 颜色组合格式\n- paragraph: 输入\n- generic: 红色 (R)（数值）\n- generic: RGB 中的红色 (R)\n- generic: 绿色 (G)（数值）\n- generic: RGB 中的绿色 (G)\n- generic: 蓝色 (B)（数值）\n- generic: RGB 中的蓝色 (B)\n- generic: 色调 (H)（数值）\n- generic: HSV/HSL 中的色调 (H)\n- generic: 饱和度 (S)（数值）\n- generic: HSV/HSL 中的饱和度 (S)\n- generic: 值 (V)（数值）\n- generic: HSV 中的值 (V)\n- generic: 亮度 (L)（数值）\n- generic: HSL 中的亮度 (L)\n- paragraph: 输出\n- generic: 颜色分量（所选颜色空间）（颜色）\n- generic: RGB：红色、绿色、蓝色 HSV：色调、饱和度、明度 HSL：色调、饱和度、亮度",
+    "executionTested": false
+  },
+  {
+    "category": "触发器",
+    "name": "启动",
+    "created": true,
+    "undoRestored": true,
+    "nodeHelp": "- button \"关闭\":\n  - generic: x\n- generic: 当特效开始时启动\n- generic: 其他名称：开始, 开启\n- button \"添加节点\":\n  - generic: 添加节点\n- paragraph: 输出\n- generic: 下一个\n- generic: 当特效开始时，运行连接的节点",
+    "executionTested": false
+  },
+  {
+    "category": "触发器",
+    "name": "帧更新",
+    "created": true,
+    "undoRestored": true,
+    "nodeHelp": "- button \"关闭\":\n  - generic: x\n- generic: 在特效的每一帧启动\n- generic: 其他名称：刷新\n- button \"添加节点\":\n  - generic: 添加节点\n- paragraph: 输出\n- generic: 下一个\n- generic: 在每一帧运行连接的节点",
+    "executionTested": false
+  },
+  {
+    "category": "触发器",
+    "name": "录制",
+    "created": true,
+    "undoRestored": true,
+    "nodeHelp": "- button \"关闭\":\n  - generic: x\n- generic: 当开始录制时启动\n- generic: 其他名称：视频录制, 拍摄\n- button \"添加节点\":\n  - generic: 添加节点\n- paragraph: 输出\n- generic: 开始时\n- generic: 当开始录制时，运行连接的节点\n- generic: 停止时\n- generic: 当结束录制时，运行连接的节点\n- generic: 录制中\n- generic: 在视频录制过程中的每一帧，运行连接的节点\n- generic: 未录制\n- generic: 在未进行视频录制的每一帧，运行连接的节点\n- generic: 正在录制（布尔值）\n- generic: 如果视频正在录制，则为 true；否则为 false",
+    "executionTested": false
+  },
+  {
+    "category": "触发器",
+    "name": "点按屏幕",
+    "created": true,
+    "undoRestored": true,
+    "nodeHelp": "- button \"关闭\":\n  - generic: x\n- generic: 当屏幕被点按时启动\n- generic: 其他名称：触碰, 按压屏幕\n- button \"添加节点\":\n  - generic: 添加节点\n- paragraph: 输入\n- generic: 触发条件（选项）\n- generic: 定义你要使用的触控模式\n- generic: 结束点按\n- generic: 在用户将手指从屏幕上移开时，运行下一个节点\n- generic: 开始点按\n- generic: 当用户的手指触碰到屏幕时，立即执行下一个节点\n- paragraph: 输出\n- generic: 下一个\n- generic: 屏幕被点按时，运行连接的节点\n- generic: 屏幕位置（2D 矢量）\n- generic: 屏幕点按位置的 X 和 Y 坐标（X 值范围：-360 至 360，Y 值范围：-640 至 640）",
+    "executionTested": false
+  },
+  {
+    "category": "触发器",
+    "name": "拖动",
+    "created": true,
+    "undoRestored": true,
+    "nodeHelp": "- button \"关闭\":\n  - generic: x\n- generic: 检测屏幕上的拖动手势\n- generic: 其他名称：屏幕拖动\n- button \"添加节点\":\n  - generic: 添加节点\n- paragraph: 输出\n- generic: 开始时\n- generic: 在用户触摸屏幕时，启动下一个节点\n- generic: 停止时\n- generic: 在用户将手指从屏幕上移开时，启动下一个节点\n- generic: 拖动\n- generic: 只要检测到拖动，就会运行下一个节点\n- generic: 开始位置（2D 矢量）\n- generic: 拖动操作起始位置的 X 和 Y 屏幕坐标（X 范围：-360 到 360，Y 范围：-640 到 640）\n- generic: 当前位置（2D 矢量）\n- generic: 用户当前触摸屏幕位置的 X 和 Y 屏幕坐标（X 范围：-360 到 360，Y 范围：-640 到 640）\n- generic: 时长（数值）\n- generic: 开始和停止之间的时长（以秒为单位）；如果用户移开手指，然后再放下，则会重置",
+    "executionTested": false
+  },
+  {
+    "category": "触发器",
+    "name": "头部动作",
+    "created": true,
+    "undoRestored": true,
+    "nodeHelp": "- button \"关闭\":\n  - generic: x\n- generic: 检测基本头部动作\n- generic: 其他名称：头部触发, 头部移动检测, 头部追踪\n- button \"添加节点\":\n  - generic: 添加节点\n- paragraph: 输入\n- generic: 动作（选项）\n- generic: 定义要检测的手势\n- generic: 摇头\n- generic: 用户的头从左向右或从右向左移动\n- generic: 点头\n- generic: 用户抬头或低头\n- generic: 向左歪头\n- generic: 用户的头向左倾斜\n- generic: 向右歪头\n- generic: 用户的头向右倾斜\n- generic: 向左看\n- generic: 用户的头向左转\n- generic: 向右看\n- generic: 用户的头向右转\n- generic: 仰头\n- generic: 用户抬头\n- generic: 低头\n- generic: 用户低头\n- paragraph: 输出\n- generic: 开始时\n- generic: 当检测到所选手势时，运行连接的节点\n- generic: 停止时\n- generic: 当未检测到所选手势时，运行连接的节点\n- generic: 正在做头部动作（布尔值）\n- generic: 如果检测到所选手势，则为 true；否则为 false",
+    "executionTested": false
+  },
+  {
+    "category": "触发器",
+    "name": "对象点按",
+    "created": true,
+    "undoRestored": true,
+    "nodeHelp": "- button \"关闭\":\n  - generic: x\n- generic: 检查对象是否已被点按\n- button \"添加节点\":\n  - generic: 添加节点\n- paragraph: 输入\n- generic: 对象（对象）\n- generic: 要检测点按的对象\n- generic: 触发条件（选项）\n- generic: 定义触控模式\n- generic: 结束点按\n- generic: 在用户将手指从屏幕上移开时，运行下一个节点\n- generic: 开始点按\n- generic: 当用户的手指触碰到屏幕时，立即执行下一个节点\n- paragraph: 输出\n- generic: 下一个\n- generic: 对象被点按时，运行连接的节点",
+    "executionTested": false
+  },
+  {
+    "category": "触发器",
+    "name": "重置时",
+    "created": true,
+    "undoRestored": true,
+    "nodeHelp": "- button \"关闭\":\n  - generic: x\n- generic: 当“重置状态”节点重置特效时开始运行\n- button \"添加节点\":\n  - generic: 添加节点\n- paragraph: 输出\n- generic: 下一个\n- generic: 当特效重置时，运行连接的节点\n- generic: 重置计数（数值）\n- generic: 特效重置的次数",
+    "executionTested": false
+  },
+  {
+    "category": "图片和视频",
+    "name": "图片序列播放器",
+    "created": true,
+    "undoRestored": true,
+    "nodeHelp": "- button \"关闭\":\n  - generic: x\n- generic: 播放或暂停播放图片序列\n- generic: 其他名称：动画纹理播放器\n- button \"添加节点\":\n  - generic: 添加节点\n- paragraph: 输入\n- generic: 播放\n- generic: 播放设定好的图片序列。如果当前处于暂停状态，则从当前帧继续播放。\n- generic: 暂停\n- generic: 在当前显示的帧处暂停图片序列\n- generic: 重启\n- generic: 重启图片序列播放器\n- generic: 图片序列（对象）\n- generic: 要控制播放的图片序列\n- paragraph: 输出\n- generic: 播放时\n- generic: 当开始播放或恢复播放时，运行连接的节点\n- generic: 暂停时\n- generic: 当图片序列暂停时，运行连接的节点\n- generic: 结束时\n- generic: 如果不循环播放，则在播放完最后一帧后运行连接的节点\n- generic: 重新开始时\n- generic: 在触发重新开始输入后运行连接的节点\n- generic: 帧号（数值）\n- generic: 图片序列中当前帧的编号，从 0 开始。第一帧的索引是 0，第二帧是 1，以此类推。\n- generic: 正在播放（布尔值）\n- generic: 当图片序列正在播放时结果为真；当图片序列暂停或播放结束时结果为假",
+    "executionTested": false
+  },
+  {
+    "category": "图片和视频",
+    "name": "绘制",
+    "created": true,
+    "undoRestored": true,
+    "nodeHelp": "- button \"关闭\":\n  - generic: x\n- generic: 在图片画布资源上创建和移除画笔标记。可用它绘制笔画、擦除现有标记或清除整个画布。此节点通常与“拖动”节点和“重新映射”节点搭配使用，以实现通过拖动手势进行绘制的功能。\n- generic: 其他名称：绘制\n- button \"添加节点\":\n  - generic: 添加节点\n- paragraph: 输入\n- generic: 绘制\n- generic: 在指定位置开始或继续绘制\n- generic: 停止绘制\n- generic: 停止绘制当前笔画\n- generic: 擦除\n- generic: 擦除指定位置的绘制内容\n- generic: 清除画布\n- generic: 从图片画布资源中移除所有绘制内容\n- generic: 位置（2D 矢量）\n- generic: 画笔或橡皮擦应用位置的 X 和 Y 坐标。使用画布坐标（X 范围：-1 到 1，Y 范围：-1 到 1）\n- generic: 结果画布（素材资源）\n- generic: 图片画布资源（此节点将在其上绘制或从中清除内容）\n- generic: 画笔大小（数值）\n- generic: 画笔的大小\n- generic: 画笔颜色（颜色）\n- generic: 画笔的颜色\n- generic: 画笔不透明度（数值）\n- generic: 画笔的不透明度\n- generic: 羽化量（数值）\n- generic: 画笔边缘的柔和度\n- paragraph: 输出\n- generic: 绘制后\n- generic: 在绘制开始或继续后运行连接的节点\n- generic: 停止绘制后\n- generic: 在绘制结束后运行连接的节点\n- generic: 擦除后\n- generic: 在擦除操作完成后运行连接的节点\n- generic: 清除画布后\n- generic: 在从图片画布资源中移除所有绘制内容后运行连接的节点",
+    "executionTested": false
+  },
+  {
+    "category": "图片和视频",
+    "name": "相机快照",
+    "created": true,
+    "undoRestored": true,
+    "nodeHelp": "- button \"关闭\":\n  - generic: x\n- generic: 从实时摄像头画面中截取一帧，并将其保存到图片画布素材资源中，该素材资源可像图片素材资源一样使用\n- generic: 其他名称：截取摄像头画面\n- button \"添加节点\":\n  - generic: 添加节点\n- paragraph: 输入\n- generic: 启动\n- generic: 开始运行此节点\n- generic: 结果画布（素材资源）\n- generic: 用于保存截取帧的图片画布资源\n- paragraph: 输出\n- generic: 下一个\n- generic: 在该节点之后运行连接的节点",
+    "executionTested": false
+  },
+  {
+    "category": "图片和视频",
+    "name": "生成 AI 图片",
+    "created": true,
+    "undoRestored": true,
+    "nodeHelp": "- button \"关闭\":\n  - generic: x\n- generic: 根据输入图片和提示生成 AI 图片\n- generic: 其他名称：图片转换生成\n- button \"添加节点\":\n  - generic: 添加节点\n- paragraph: 输入\n- generic: 启动\n- generic: 开始运行此节点\n- generic: 输入图片（素材资源）\n- generic: 用作创建 AI 图片起点的图片画布。例如，相机快照画布。\n- generic: AI 图片提示（素材资源）\n- generic: 用于创建 AI 图片的说明和保留设置\n- generic: 结果画布（素材资源）\n- generic: 将生成 AI 图片的图片画布\n- paragraph: 输出\n- generic: 开始时\n- generic: 在转换开始后运行连接的节点\n- generic: 结束时\n- generic: 在转换完成后运行连接的节点",
+    "executionTested": false
+  },
+  {
+    "category": "图片和视频",
+    "name": "制作 AI 视频",
+    "created": true,
+    "undoRestored": true,
+    "nodeHelp": "- button \"关闭\":\n  - generic: x\n- generic: 此节点会根据输入的图片和提示生成 AI 视频，当此节点运行时，特效结束。\n- generic: 其他名称：以图片生成视频\n- button \"添加节点\":\n  - generic: 添加节点\n- paragraph: 输入\n- generic: 启动\n- generic: 开始运行此节点\n- generic: 输入图片（素材资源）\n- generic: 用作 AI 视频创作起点的图片画布。例如，相机快照画布。\n- generic: AI 视频提示（素材资源）\n- generic: 用于制作 AI 视频的提示和设置",
+    "executionTested": false
+  },
+  {
+    "category": "图片和视频",
+    "name": "添加到图片画布",
+    "created": true,
+    "undoRestored": true,
+    "nodeHelp": "- button \"关闭\":\n  - generic: x\n- generic: 将源画布复制到结果画布，并将两者合并。使用此功能可将绘图叠加到相机快照或其他创建的图片上。\n- button \"添加节点\":\n  - generic: 添加节点\n- paragraph: 输入\n- generic: 启动\n- generic: 开始运行此节点\n- generic: 来源图片（素材资源）\n- generic: 要从中复制的图片\n- generic: 位置（2D 矢量）\n- generic: 结果画布中待复制图片所在位置的 X 和 Y 坐标。使用画布坐标（X 范围：-1 到 1，Y 范围：-1 到 1）。\n- generic: 旋转（数值）\n- generic: 设置要复制的图片的旋转角度。\n- generic: 缩放（2D 矢量）\n- generic: 设置要复制的图片的缩放比例。\n- generic: 颜色（颜色）\n- generic: 设置要复制的图片的色调。\n- generic: 不透明度（数值）\n- generic: 设置要复制的图片的不透明度。\n- generic: 蒙版（素材资源）\n- generic: 用于控制待复制图片区域透明度级别的 Alpha 蒙版。\n- generic: 反转掩膜（布尔值）\n- generic: 反转蒙版，使黑色区域显示，白色区域隐藏。\n- generic: 结果画布（素材资源）\n- generic: 要复制到的画布。\n- paragraph: 输出\n- generic: 下一个\n- generic: 在该节点之后运行连接的节点",
+    "executionTested": false
+  }
+]
