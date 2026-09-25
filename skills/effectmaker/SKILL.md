@@ -1,40 +1,40 @@
 ---
 name: effectmaker
-description: Create, inspect, and edit YouTube Effect Maker projects at effects.youtube.com using tested browser and CDP helpers. Use for text, assets, filters, face effects, 3D, visual scripting, and repeatable editor checks. This is not Effect House or a video-editing skill.
+description: Create, inspect, and edit YouTube Effect Maker projects using English UI helpers built on Browser Harness, with Codex browser and Playwright/CDP adapters. Use for effects, text, assets, 3D and visual scripting. This is not Effect House or video editing.
 ---
 
 # YouTube Effect Maker
 
-Use the current signed-in Effect Maker tab and the bundled helpers instead of rediscovering the editor. The selectors and accessible names were tested with the Simplified Chinese interface on 2026-09-24/25. Inspect a fresh accessibility snapshot before adapting to another language or a changed UI; do not silently change the account language.
+Use the supplied project and current signed-in session. The helpers target **English (US)**, observed on 2026-09-25. Inspect the current UI before editing. When the user wants English, use **Account menu → Language → English (US)** after confirming the project is saved. This reloads the editor and clears its undo history. Existing object/asset names do not translate automatically.
 
-## Choose a connection
+## Choose the available transport
 
-For the Codex browser, use `cua_repl` to bind the supplied project URL. First read its current browser documentation. Then import `scripts/sdk.mjs` and call `fromCodexTab(tab)`. It accepts the documented Playwright-compatible browser surface.
+**Browser Harness:** read [integration and recipes](references/browser-harness.md), then import `scripts/effectmaker_harness.py` inside an existing authorized Browser Harness session. It reuses upstream connection, CDP, mouse and keyboard helpers. Put project-specific additions in the agent workspace; do not modify the upstream core. Select exactly one matching project tab and serialize operations because a daemon has one current tab.
 
-When raw CDP is available, read `(await tab.capabilities.get('cdp')).documentation()`, import `scripts/raw-cdp.mjs`, and call `await fromCodexRawTab(tab)`. This wrapper finds fresh backend node IDs from the accessibility tree, scrolls and clicks through CDP, and routes keyboard entry through the supported Codex keyboard API. Codex rejects raw keyboard CDP commands; do not work around that restriction through page scripts.
+**Codex in-app browser:** read its current browser documentation, bind the supplied tab, import `scripts/sdk.mjs`, and call `fromCodexTab(tab)`. For raw CDP, read the tab's CDP capability documentation and use `fromCodexRawTab(tab)` from `scripts/raw-cdp.mjs`. The wrapper uses CDP for AX/DOM/mouse and the supported Codex keyboard API for text. Do not use Browser Harness to bypass a restricted Codex command or search internal app configuration for a websocket.
 
-For an existing, authorized local Chromium debugging endpoint, use `scripts/cdp.mjs` → `connectCDP(endpoint,{pageUrl})` in Node with Playwright installed. It attaches to exactly one matching tab. Do not start debugging against a personal browser profile or copy cookies to a new profile. `disconnect()` leaves the host browser open. The standalone transport has been tested against a real local CDP browser; the actual Effect Maker project has also been tested with the Codex raw-CDP adapter.
+**Standalone Playwright:** use `scripts/cdp.mjs` → `connectCDP(endpoint,{pageUrl})` with an already authorized local endpoint. `disconnect()` preserves the browser. Do not copy cookies or export the user's browser profile to establish a session.
 
-Read [API and recipes](references/api.md) for ready-to-use examples and function signatures. Read [test coverage](references/coverage.md) before claiming a feature is verified. The 79-node catalog and creation/undo results are in [node catalog](references/node-catalog.json).
+Use [API and recipes](references/api.md) for JavaScript operations, [English node names](references/node-catalog-en.json) for discovery, and [coverage](references/coverage.md) before claiming anything was tested. Original Chinese evidence in `node-catalog.json` is historical, not the current selector catalog.
 
-## Editor invariants learned from testing
+## Editor invariants
 
-- Opening a toolbar panel is a toggle. Use `openPanel()` instead of assuming each click opens it. Script category `图片和视频` shares its accessible name with the toolbar; scope/disambiguate it as the helper does.
-- Numeric inputs are custom text fields with `role=spinbutton`. `fill()` can alter the displayed value without changing `aria-valuenow` or the saved value. Use `setNumber()` (bounded up/down key round trip), or `RawEffectMakerCDP.replace()` with native keyboard input, and reselect the object to verify. Do not report success from the visible input alone.
-- Object renaming commits on losing focus. `renameObject()` explicitly focuses the project name afterward. Reacquire the row by its new name.
-- “X”, “Y”, “颜色”, “大小”, and “不透明度” repeat across property groups. Scope them to the current group; 3D groups can repeat axes for position, rotation, and scale, requiring an explicit index grounded in the current snapshot.
-- A successful asset upload or existing-asset selection can automatically close the dialog and create the object. `finishAsset()` waits for it to disappear; do not blindly click “完成” again. Upload completion can be slow. After timeout, inspect the dialog and object tree before retrying to avoid duplicates.
-- Use `waitSaved()` to verify `data-title="已保存"`. It retries only the read. After any ambiguous mutation failure, inspect actual state before retrying the action.
-- Undo/redo changes selection, and a fresh page load clears undo history. Do not rely on yesterday's undo stack. Test-node smoke checks create one node then undo it and assert the previous graph is restored.
-- AI image/video tools create several objects, assets, and connected nodes together. Prompts are English. The editor reports that drawing cannot coexist with AI image/video. Test those combinations separately or undo the drawing creation.
-- `身体分割` and `摄像头画面` objects use the built-in sample video without granting camera access. Device preview only proves a QR code opens; physical-phone behavior needs an actual phone.
-- The initial “提交” opens validation and thumbnail setup. That is not a published effect. Do not publish, accept terms, or send feedback as an incidental feature test.
+- Toolbar buttons toggle panels; use `openPanel()` rather than assuming every click opens the root. A property heading can share a toolbar name: match the panel's level-two heading.
+- Number fields are custom `spinbutton` inputs. `fill()` alone can change the display without committing. Use `setNumber()` or the Harness `set_number()` and verify `aria-valuenow`; reselect the object for persistence checks.
+- Scope repeated names such as X, Y, Color, Size and Opacity to a property group. Use a fresh observed index only when the group still contains duplicates.
+- Renaming an object needs explicit blur after entry. The JavaScript helper clicks Project title before checking the new row.
+- Asset uploads/selections may close the dialog and create the object automatically. Wait for completion; do not blindly click Done or retry an upload after a timeout.
+- Saved state is `data-title="Saved"` on **Save status indicator**. Retry reads only; inspect after an ambiguous mutation before repeating it.
+- Undo changes selection. Node smoke checks require an authorized test project with no concurrent editing, then create one node, undo once and check restoration. They do not prove node execution semantics.
+- Draw conflicts with AI image/video combinations. Use separate test projects or undo the temporary Draw combination.
+- Built-in preview video does not require camera permission. A device QR dialog does not prove phone compatibility.
+- Submit initially opens validation/thumbnail setup. Do not publish an effect as an incidental test.
 
 ## Working flow
 
-1. Bind the requested project (or create one if asked), inspect its name and current objects.
-2. Use `beginAdd`, `addText`, asset helpers, scoped property edits, and node helpers for the requested changes. Do not add every tested object to ordinary projects.
-3. Read saved state, reselect edited objects, and inspect the preview. For important persistence checks, reload only after save is confirmed and then verify again.
-4. Record failures and boundaries accurately: node creation/undo is a smoke test, not execution or numerical correctness of every node. Report unsupported features explicitly.
+1. Inspect project title, locale and objects; select the requested project explicitly.
+2. Apply only the requested edits using the available transport. Keep new instructions and documentation in English; preserve user-authored project content.
+3. Verify committed properties and saved state, then inspect the preview. Reload only after save and only when a persistence check warrants losing undo history.
+4. Record observed failures and untested boundaries. Add a reusable helper when a repeated operation or demonstrated bug warrants it; avoid accumulating speculative selectors.
 
-The historical HeloWorld project and prior test outcomes are examples, not a default destination for future edits. Request-specific project URLs and user choices take precedence.
+HeloWorld is a historical test project, not the default destination for future requests.
