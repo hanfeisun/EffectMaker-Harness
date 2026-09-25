@@ -1,0 +1,200 @@
+[
+  {
+    "name": "selectObject",
+    "passed": true,
+    "time": "2026-09-24T22:18:27.101Z",
+    "result": "UI snapshot captured"
+  },
+  {
+    "name": "setNumber",
+    "passed": true,
+    "time": "2026-09-24T22:19:41.327Z",
+    "result": {
+      "committed": 15,
+      "value": 15
+    }
+  },
+  {
+    "name": "setPlaying",
+    "passed": true,
+    "time": "2026-09-24T22:19:41.382Z",
+    "result": "UI snapshot captured"
+  },
+  {
+    "name": "showAssets",
+    "passed": true,
+    "time": "2026-09-24T22:19:41.786Z",
+    "result": "UI snapshot captured"
+  },
+  {
+    "name": "showObjects",
+    "passed": true,
+    "time": "2026-09-24T22:19:42.192Z",
+    "result": "UI snapshot captured"
+  },
+  {
+    "name": "selectText",
+    "passed": true,
+    "time": "2026-09-24T22:19:42.899Z",
+    "result": "UI snapshot captured"
+  },
+  {
+    "name": "setText",
+    "passed": true,
+    "time": "2026-09-24T22:19:43.000Z",
+    "result": "UI snapshot captured"
+  },
+  {
+    "name": "setTextStyle",
+    "passed": true,
+    "time": "2026-09-24T22:19:43.101Z",
+    "result": "UI snapshot captured"
+  },
+  {
+    "name": "setTextPosition",
+    "passed": true,
+    "time": "2026-09-24T22:19:44.272Z",
+    "result": {
+      "committed": 220,
+      "value": 220
+    }
+  },
+  {
+    "name": "setCheckbox",
+    "passed": true,
+    "time": "2026-09-24T22:19:55.023Z",
+    "result": "UI snapshot captured"
+  },
+  {
+    "name": "setCheckbox.restore",
+    "passed": true,
+    "time": "2026-09-24T22:19:58.153Z",
+    "result": "UI snapshot captured"
+  },
+  {
+    "name": "setObjectVisible.off",
+    "passed": true,
+    "time": "2026-09-24T22:20:02.132Z",
+    "result": "UI snapshot captured"
+  },
+  {
+    "name": "setObjectVisible.on",
+    "passed": true,
+    "time": "2026-09-24T22:20:05.105Z",
+    "result": "UI snapshot captured"
+  },
+  {
+    "name": "editMode",
+    "passed": true,
+    "time": "2026-09-24T22:20:05.428Z",
+    "result": "UI snapshot captured"
+  },
+  {
+    "name": "transformTool",
+    "passed": true,
+    "time": "2026-09-24T22:20:05.730Z",
+    "result": "UI snapshot captured"
+  },
+  {
+    "name": "transformTool.restore",
+    "passed": true,
+    "time": "2026-09-24T22:20:06.034Z",
+    "result": "UI snapshot captured"
+  },
+  {
+    "name": "setGraphVisible",
+    "passed": true,
+    "time": "2026-09-24T22:20:06.645Z",
+    "result": "UI snapshot captured"
+  },
+  {
+    "name": "smokeNode",
+    "passed": true,
+    "time": "2026-09-24T22:20:12.516Z",
+    "result": {
+      "category": "数学",
+      "name": "加",
+      "created": true,
+      "undoRestored": true,
+      "executionTested": false
+    }
+  },
+  {
+    "name": "renameProject",
+    "passed": true,
+    "time": "2026-09-24T22:20:32.420Z",
+    "result": "UI snapshot captured"
+  },
+  {
+    "name": "addText",
+    "passed": true,
+    "time": "2026-09-24T22:20:33.737Z",
+    "result": "UI snapshot captured"
+  },
+  {
+    "name": "renameObject",
+    "passed": true,
+    "time": "2026-09-24T22:21:13.197Z",
+    "result": "UI snapshot captured"
+  },
+  {
+    "name": "objectMenu.delete",
+    "passed": true,
+    "time": "2026-09-24T22:21:14.456Z",
+    "result": "UI snapshot captured"
+  },
+  {
+    "name": "undo",
+    "passed": true,
+    "time": "2026-09-24T22:21:16.192Z",
+    "result": "UI snapshot captured"
+  },
+  {
+    "name": "redo",
+    "passed": true,
+    "time": "2026-09-24T22:21:19.317Z",
+    "result": "UI snapshot captured"
+  },
+  {
+    "name": "searchNodes",
+    "passed": true,
+    "time": "2026-09-24T22:21:19.923Z",
+    "result": "UI snapshot captured"
+  },
+  {
+    "name": "devicePreview",
+    "passed": true,
+    "time": "2026-09-24T22:23:06.708Z",
+    "result": "UI snapshot captured"
+  },
+  {
+    "name": "dismissDialog",
+    "passed": true,
+    "time": "2026-09-24T22:23:06.834Z",
+    "result": "UI snapshot captured"
+  },
+  {
+    "name": "showPreviewModels",
+    "passed": true,
+    "time": "2026-09-24T22:23:07.150Z",
+    "result": "UI snapshot captured"
+  },
+  {
+    "name": "choosePreviewModel",
+    "passed": true,
+    "time": "2026-09-24T22:23:07.547Z",
+    "result": "UI snapshot captured"
+  },
+  {
+    "name": "resetPreview",
+    "passed": true,
+    "time": "2026-09-24T22:23:07.851Z",
+    "result": "UI snapshot captured"
+  },
+  {
+    "name": "setGraphVisible.hide",
+    "passed": true,
+    "time": "2026-09-24T22:23:08.456Z",
+    "result": "UI snapshot captured"
+  }
+]

@@ -1,0 +1,11 @@
+{
+  "date": "2026-09-25",
+  "transport": "Playwright connectOverCDP against local temporary Chromium",
+  "passed": 2,
+  "failed": 0,
+  "checks": [
+    "Reject remote endpoints and embedded credentials",
+    "Connect to real browser and commit values 15, 100, -100; reject out-of-bounds and NaN; raw CDP replacement commits 23; saved marker verified; disconnect preserves host page"
+  ],
+  "scope": "local fixture; not full Effect Maker end-to-end"
+}

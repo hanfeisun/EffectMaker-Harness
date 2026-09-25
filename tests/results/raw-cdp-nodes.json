@@ -1,0 +1,476 @@
+[
+  {
+    "category": "逻辑",
+    "name": "且",
+    "created": true,
+    "undoRestored": true
+  },
+  {
+    "category": "逻辑",
+    "name": "或",
+    "created": true,
+    "undoRestored": true
+  },
+  {
+    "category": "逻辑",
+    "name": "非",
+    "created": true,
+    "undoRestored": true
+  },
+  {
+    "category": "逻辑",
+    "name": "等于",
+    "created": true,
+    "undoRestored": true
+  },
+  {
+    "category": "逻辑",
+    "name": "不等于",
+    "created": true,
+    "undoRestored": true
+  },
+  {
+    "category": "逻辑",
+    "name": "大于",
+    "created": true,
+    "undoRestored": true
+  },
+  {
+    "category": "逻辑",
+    "name": "小于",
+    "created": true,
+    "undoRestored": true
+  },
+  {
+    "category": "逻辑",
+    "name": "小于或等于",
+    "created": true,
+    "undoRestored": true
+  },
+  {
+    "category": "逻辑",
+    "name": "大于或等于",
+    "created": true,
+    "undoRestored": true
+  },
+  {
+    "category": "逻辑",
+    "name": "对象重叠",
+    "created": true,
+    "undoRestored": true
+  },
+  {
+    "category": "逻辑",
+    "name": "对象包含位置",
+    "created": true,
+    "undoRestored": true
+  },
+  {
+    "category": "逻辑",
+    "name": "文本包含",
+    "created": true,
+    "undoRestored": true
+  },
+  {
+    "category": "逻辑",
+    "name": "列表包含",
+    "created": true,
+    "undoRestored": true
+  },
+  {
+    "category": "控制流",
+    "name": "如果",
+    "created": true,
+    "undoRestored": true
+  },
+  {
+    "category": "控制流",
+    "name": "限制器",
+    "created": true,
+    "undoRestored": true
+  },
+  {
+    "category": "控制流",
+    "name": "对于每一个",
+    "created": true,
+    "undoRestored": true
+  },
+  {
+    "category": "控制流",
+    "name": "For 循环",
+    "created": true,
+    "undoRestored": true
+  },
+  {
+    "category": "控制流",
+    "name": "延迟",
+    "created": true,
+    "undoRestored": true
+  },
+  {
+    "category": "控制流",
+    "name": "重置状态",
+    "created": true,
+    "undoRestored": true
+  },
+  {
+    "category": "控制流",
+    "name": "脉冲",
+    "created": true,
+    "undoRestored": true
+  },
+  {
+    "category": "控制流",
+    "name": "切换",
+    "created": true,
+    "undoRestored": true
+  },
+  {
+    "category": "控制流",
+    "name": "序列",
+    "created": true,
+    "undoRestored": true
+  },
+  {
+    "category": "数学",
+    "name": "加",
+    "created": true,
+    "undoRestored": true
+  },
+  {
+    "category": "数学",
+    "name": "减去",
+    "created": true,
+    "undoRestored": true
+  },
+  {
+    "category": "数学",
+    "name": "正片叠底",
+    "created": true,
+    "undoRestored": true
+  },
+  {
+    "category": "数学",
+    "name": "除",
+    "created": true,
+    "undoRestored": true
+  },
+  {
+    "category": "数学",
+    "name": "取模",
+    "created": true,
+    "undoRestored": true
+  },
+  {
+    "category": "数学",
+    "name": "绝对值",
+    "created": true,
+    "undoRestored": true
+  },
+  {
+    "category": "数学",
+    "name": "最小值",
+    "created": true,
+    "undoRestored": true
+  },
+  {
+    "category": "数学",
+    "name": "最大值",
+    "created": true,
+    "undoRestored": true
+  },
+  {
+    "category": "数学",
+    "name": "正弦",
+    "created": true,
+    "undoRestored": true
+  },
+  {
+    "category": "数学",
+    "name": "余弦",
+    "created": true,
+    "undoRestored": true
+  },
+  {
+    "category": "数学",
+    "name": "正切",
+    "created": true,
+    "undoRestored": true
+  },
+  {
+    "category": "数学",
+    "name": "限制取值范围",
+    "created": true,
+    "undoRestored": true
+  },
+  {
+    "category": "数学",
+    "name": "随机数",
+    "created": true,
+    "undoRestored": true
+  },
+  {
+    "category": "数学",
+    "name": "插值",
+    "created": true,
+    "undoRestored": true
+  },
+  {
+    "category": "数学",
+    "name": "重新映射",
+    "created": true,
+    "undoRestored": true
+  },
+  {
+    "category": "数学",
+    "name": "平方根",
+    "created": true,
+    "undoRestored": true
+  },
+  {
+    "category": "数学",
+    "name": "幂",
+    "created": true,
+    "undoRestored": true
+  },
+  {
+    "category": "数学",
+    "name": "取整",
+    "created": true,
+    "undoRestored": true
+  },
+  {
+    "category": "数学",
+    "name": "叉积",
+    "created": true,
+    "undoRestored": true
+  },
+  {
+    "category": "数学",
+    "name": "点积",
+    "created": true,
+    "undoRestored": true
+  },
+  {
+    "category": "数学",
+    "name": "列表范围",
+    "created": true,
+    "undoRestored": true
+  },
+  {
+    "category": "数学",
+    "name": "平均值",
+    "created": true,
+    "undoRestored": true
+  },
+  {
+    "category": "数学",
+    "name": "中位数",
+    "created": true,
+    "undoRestored": true
+  },
+  {
+    "category": "数学",
+    "name": "众数",
+    "created": true,
+    "undoRestored": true
+  },
+  {
+    "category": "数学",
+    "name": "向量距离",
+    "created": true,
+    "undoRestored": true
+  },
+  {
+    "category": "场景对象",
+    "name": "获取属性",
+    "created": true,
+    "undoRestored": true
+  },
+  {
+    "category": "场景对象",
+    "name": "设置属性",
+    "created": true,
+    "undoRestored": true
+  },
+  {
+    "category": "场景对象",
+    "name": "头部追踪",
+    "created": true,
+    "undoRestored": true
+  },
+  {
+    "category": "场景对象",
+    "name": "特效时间",
+    "created": true,
+    "undoRestored": true
+  },
+  {
+    "category": "数据",
+    "name": "过渡",
+    "created": true,
+    "undoRestored": true
+  },
+  {
+    "category": "数据",
+    "name": "获取变量",
+    "created": true,
+    "undoRestored": true
+  },
+  {
+    "category": "数据",
+    "name": "设置变量",
+    "created": true,
+    "undoRestored": true
+  },
+  {
+    "category": "数据",
+    "name": "从列表中获取",
+    "created": true,
+    "undoRestored": true
+  },
+  {
+    "category": "数据",
+    "name": "在列表中替换",
+    "created": true,
+    "undoRestored": true
+  },
+  {
+    "category": "数据",
+    "name": "从列表中移除",
+    "created": true,
+    "undoRestored": true
+  },
+  {
+    "category": "数据",
+    "name": "插入列表中",
+    "created": true,
+    "undoRestored": true
+  },
+  {
+    "category": "数据",
+    "name": "获取列表长度",
+    "created": true,
+    "undoRestored": true
+  },
+  {
+    "category": "数据",
+    "name": "排序",
+    "created": true,
+    "undoRestored": true
+  },
+  {
+    "category": "数据",
+    "name": "分解向量",
+    "created": true,
+    "undoRestored": true
+  },
+  {
+    "category": "数据",
+    "name": "合并为向量",
+    "created": true,
+    "undoRestored": true
+  },
+  {
+    "category": "数据",
+    "name": "数字转文本",
+    "created": true,
+    "undoRestored": true
+  },
+  {
+    "category": "数据",
+    "name": "拆分颜色",
+    "created": true,
+    "undoRestored": true
+  },
+  {
+    "category": "数据",
+    "name": "构建颜色",
+    "created": true,
+    "undoRestored": true
+  },
+  {
+    "category": "触发器",
+    "name": "启动",
+    "created": true,
+    "undoRestored": true
+  },
+  {
+    "category": "触发器",
+    "name": "帧更新",
+    "created": true,
+    "undoRestored": true
+  },
+  {
+    "category": "触发器",
+    "name": "录制",
+    "created": true,
+    "undoRestored": true
+  },
+  {
+    "category": "触发器",
+    "name": "点按屏幕",
+    "created": true,
+    "undoRestored": true
+  },
+  {
+    "category": "触发器",
+    "name": "拖动",
+    "created": true,
+    "undoRestored": true
+  },
+  {
+    "category": "触发器",
+    "name": "头部动作",
+    "created": true,
+    "undoRestored": true
+  },
+  {
+    "category": "触发器",
+    "name": "对象点按",
+    "created": true,
+    "undoRestored": true
+  },
+  {
+    "category": "触发器",
+    "name": "重置时",
+    "created": true,
+    "undoRestored": true
+  },
+  {
+    "category": "图片和视频",
+    "name": "图片序列播放器",
+    "created": true,
+    "undoRestored": true
+  },
+  {
+    "category": "图片和视频",
+    "name": "绘制",
+    "created": true,
+    "undoRestored": true
+  },
+  {
+    "category": "图片和视频",
+    "name": "相机快照",
+    "created": true,
+    "undoRestored": true
+  },
+  {
+    "category": "图片和视频",
+    "name": "生成 AI 图片",
+    "created": true,
+    "undoRestored": true
+  },
+  {
+    "category": "图片和视频",
+    "name": "制作 AI 视频",
+    "created": true,
+    "undoRestored": true
+  },
+  {
+    "category": "图片和视频",
+    "name": "添加到图片画布",
+    "created": true,
+    "undoRestored": true
+  }
+]
