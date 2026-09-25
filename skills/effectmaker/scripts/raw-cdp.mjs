@@ -47,12 +47,12 @@ export class RawEffectMakerCDP {
   }
   async value(role,name,options){const node=await this.find(role,name,options);return node.value?.value;}
   async saved(){
-    const node=await this.find('button','保存状态指示符');
+    const node=await this.find('button','Save status indicator');
     await this.cdp.send('DOM.getDocument');
     const {nodeIds}=await this.cdp.send('DOM.pushNodesByBackendIdsToFrontend',{backendNodeIds:[node.backendDOMNodeId]});
     const {attributes}=await this.cdp.send('DOM.getAttributes',{nodeId:nodeIds[0]});
     const pairs={};for(let i=0;i<attributes.length;i+=2)pairs[attributes[i]]=attributes[i+1];
-    return {saved:pairs['data-title']==='已保存',label:pairs['data-title']??null};
+    return {saved:pairs['data-title']==='Saved',label:pairs['data-title']??null};
   }
 }
 
