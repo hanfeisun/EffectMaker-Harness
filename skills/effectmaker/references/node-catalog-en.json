@@ -1,0 +1,476 @@
+[
+  {
+    "category": "Triggers",
+    "name": "Start",
+    "observed": true,
+    "executionTested": false
+  },
+  {
+    "category": "Triggers",
+    "name": "Frame update",
+    "observed": true,
+    "executionTested": false
+  },
+  {
+    "category": "Triggers",
+    "name": "Record",
+    "observed": true,
+    "executionTested": false
+  },
+  {
+    "category": "Triggers",
+    "name": "Tap",
+    "observed": true,
+    "executionTested": false
+  },
+  {
+    "category": "Triggers",
+    "name": "Drag",
+    "observed": true,
+    "executionTested": false
+  },
+  {
+    "category": "Triggers",
+    "name": "Head gesture",
+    "observed": true,
+    "executionTested": false
+  },
+  {
+    "category": "Triggers",
+    "name": "Object tap",
+    "observed": true,
+    "executionTested": false
+  },
+  {
+    "category": "Triggers",
+    "name": "On reset",
+    "observed": true,
+    "executionTested": false
+  },
+  {
+    "category": "Logic",
+    "name": "And",
+    "observed": true,
+    "executionTested": false
+  },
+  {
+    "category": "Logic",
+    "name": "Or",
+    "observed": true,
+    "executionTested": false
+  },
+  {
+    "category": "Logic",
+    "name": "Not",
+    "observed": true,
+    "executionTested": false
+  },
+  {
+    "category": "Logic",
+    "name": "Equal",
+    "observed": true,
+    "executionTested": false
+  },
+  {
+    "category": "Logic",
+    "name": "Not equal",
+    "observed": true,
+    "executionTested": false
+  },
+  {
+    "category": "Logic",
+    "name": "Greater than",
+    "observed": true,
+    "executionTested": false
+  },
+  {
+    "category": "Logic",
+    "name": "Less than",
+    "observed": true,
+    "executionTested": false
+  },
+  {
+    "category": "Logic",
+    "name": "Less than or equal to",
+    "observed": true,
+    "executionTested": false
+  },
+  {
+    "category": "Logic",
+    "name": "Greater than or equal to",
+    "observed": true,
+    "executionTested": false
+  },
+  {
+    "category": "Logic",
+    "name": "Object overlap",
+    "observed": true,
+    "executionTested": false
+  },
+  {
+    "category": "Logic",
+    "name": "Object contains position",
+    "observed": true,
+    "executionTested": false
+  },
+  {
+    "category": "Logic",
+    "name": "Text contains",
+    "observed": true,
+    "executionTested": false
+  },
+  {
+    "category": "Logic",
+    "name": "List contains",
+    "observed": true,
+    "executionTested": false
+  },
+  {
+    "category": "Control flow",
+    "name": "If",
+    "observed": true,
+    "executionTested": false
+  },
+  {
+    "category": "Control flow",
+    "name": "Limiter",
+    "observed": true,
+    "executionTested": false
+  },
+  {
+    "category": "Control flow",
+    "name": "For each",
+    "observed": true,
+    "executionTested": false
+  },
+  {
+    "category": "Control flow",
+    "name": "For loop",
+    "observed": true,
+    "executionTested": false
+  },
+  {
+    "category": "Control flow",
+    "name": "Delay",
+    "observed": true,
+    "executionTested": false
+  },
+  {
+    "category": "Control flow",
+    "name": "Reset state",
+    "observed": true,
+    "executionTested": false
+  },
+  {
+    "category": "Control flow",
+    "name": "Pulse",
+    "observed": true,
+    "executionTested": false
+  },
+  {
+    "category": "Control flow",
+    "name": "Toggle",
+    "observed": true,
+    "executionTested": false
+  },
+  {
+    "category": "Control flow",
+    "name": "Sequence",
+    "observed": true,
+    "executionTested": false
+  },
+  {
+    "category": "Scene objects",
+    "name": "Get property",
+    "observed": true,
+    "executionTested": false
+  },
+  {
+    "category": "Scene objects",
+    "name": "Set property",
+    "observed": true,
+    "executionTested": false
+  },
+  {
+    "category": "Scene objects",
+    "name": "Head tracking",
+    "observed": true,
+    "executionTested": false
+  },
+  {
+    "category": "Scene objects",
+    "name": "Effect time",
+    "observed": true,
+    "executionTested": false
+  },
+  {
+    "category": "Math",
+    "name": "Add",
+    "observed": true,
+    "executionTested": false
+  },
+  {
+    "category": "Math",
+    "name": "Subtract",
+    "observed": true,
+    "executionTested": false
+  },
+  {
+    "category": "Math",
+    "name": "Multiply",
+    "observed": true,
+    "executionTested": false
+  },
+  {
+    "category": "Math",
+    "name": "Divide",
+    "observed": true,
+    "executionTested": false
+  },
+  {
+    "category": "Math",
+    "name": "Mod",
+    "observed": true,
+    "executionTested": false
+  },
+  {
+    "category": "Math",
+    "name": "Absolute value",
+    "observed": true,
+    "executionTested": false
+  },
+  {
+    "category": "Math",
+    "name": "Min",
+    "observed": true,
+    "executionTested": false
+  },
+  {
+    "category": "Math",
+    "name": "Max",
+    "observed": true,
+    "executionTested": false
+  },
+  {
+    "category": "Math",
+    "name": "Sine",
+    "observed": true,
+    "executionTested": false
+  },
+  {
+    "category": "Math",
+    "name": "Cosine",
+    "observed": true,
+    "executionTested": false
+  },
+  {
+    "category": "Math",
+    "name": "Tangent",
+    "observed": true,
+    "executionTested": false
+  },
+  {
+    "category": "Math",
+    "name": "Clamp",
+    "observed": true,
+    "executionTested": false
+  },
+  {
+    "category": "Math",
+    "name": "Random",
+    "observed": true,
+    "executionTested": false
+  },
+  {
+    "category": "Math",
+    "name": "Interpolate",
+    "observed": true,
+    "executionTested": false
+  },
+  {
+    "category": "Math",
+    "name": "Remap",
+    "observed": true,
+    "executionTested": false
+  },
+  {
+    "category": "Math",
+    "name": "Square root",
+    "observed": true,
+    "executionTested": false
+  },
+  {
+    "category": "Math",
+    "name": "Power",
+    "observed": true,
+    "executionTested": false
+  },
+  {
+    "category": "Math",
+    "name": "Round",
+    "observed": true,
+    "executionTested": false
+  },
+  {
+    "category": "Math",
+    "name": "Cross product",
+    "observed": true,
+    "executionTested": false
+  },
+  {
+    "category": "Math",
+    "name": "Dot product",
+    "observed": true,
+    "executionTested": false
+  },
+  {
+    "category": "Math",
+    "name": "List range",
+    "observed": true,
+    "executionTested": false
+  },
+  {
+    "category": "Math",
+    "name": "Average",
+    "observed": true,
+    "executionTested": false
+  },
+  {
+    "category": "Math",
+    "name": "Median",
+    "observed": true,
+    "executionTested": false
+  },
+  {
+    "category": "Math",
+    "name": "Mode",
+    "observed": true,
+    "executionTested": false
+  },
+  {
+    "category": "Math",
+    "name": "Vector distance",
+    "observed": true,
+    "executionTested": false
+  },
+  {
+    "category": "Data",
+    "name": "Transition",
+    "observed": true,
+    "executionTested": false
+  },
+  {
+    "category": "Data",
+    "name": "Get variable",
+    "observed": true,
+    "executionTested": false
+  },
+  {
+    "category": "Data",
+    "name": "Set variable",
+    "observed": true,
+    "executionTested": false
+  },
+  {
+    "category": "Data",
+    "name": "Get from list",
+    "observed": true,
+    "executionTested": false
+  },
+  {
+    "category": "Data",
+    "name": "Replace in list",
+    "observed": true,
+    "executionTested": false
+  },
+  {
+    "category": "Data",
+    "name": "Remove from list",
+    "observed": true,
+    "executionTested": false
+  },
+  {
+    "category": "Data",
+    "name": "Insert in list",
+    "observed": true,
+    "executionTested": false
+  },
+  {
+    "category": "Data",
+    "name": "Get list length",
+    "observed": true,
+    "executionTested": false
+  },
+  {
+    "category": "Data",
+    "name": "Sort",
+    "observed": true,
+    "executionTested": false
+  },
+  {
+    "category": "Data",
+    "name": "Split vector",
+    "observed": true,
+    "executionTested": false
+  },
+  {
+    "category": "Data",
+    "name": "Combine into vector",
+    "observed": true,
+    "executionTested": false
+  },
+  {
+    "category": "Data",
+    "name": "Number to text",
+    "observed": true,
+    "executionTested": false
+  },
+  {
+    "category": "Data",
+    "name": "Split color",
+    "observed": true,
+    "executionTested": false
+  },
+  {
+    "category": "Data",
+    "name": "Build color",
+    "observed": true,
+    "executionTested": false
+  },
+  {
+    "category": "Images & video",
+    "name": "Image sequence player",
+    "observed": true,
+    "executionTested": false
+  },
+  {
+    "category": "Images & video",
+    "name": "Draw",
+    "observed": true,
+    "executionTested": false
+  },
+  {
+    "category": "Images & video",
+    "name": "Camera snapshot",
+    "observed": true,
+    "executionTested": false
+  },
+  {
+    "category": "Images & video",
+    "name": "Create AI image",
+    "observed": true,
+    "executionTested": false
+  },
+  {
+    "category": "Images & video",
+    "name": "Create AI video",
+    "observed": true,
+    "executionTested": false
+  },
+  {
+    "category": "Images & video",
+    "name": "Add to image canvas",
+    "observed": true,
+    "executionTested": false
+  }
+]

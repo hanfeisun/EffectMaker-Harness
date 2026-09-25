@@ -1,56 +1,59 @@
-# 实测覆盖报告
+# Test coverage
 
-测试日期：2026-09-24/25。界面：简体中文。项目：HeloWorld。
+Dates: 2026-09-24/25. Project: HeloWorld. Current interface: English (US).
 
-## 测试层次
+## Current English revision
 
-- **原生 CDP 页面实测**：79 个可见视觉脚本节点逐个创建、检查 AX 子树变化、撤销并确认恢复。79/79 通过。
-- **高层 SDK 页面实测**：31 条检查通过，含重复恢复步骤；并非 31 个不同功能。完整记录见仓库 `tests/results/sdk-live.json`。
-- **独立 CDP 集成**：使用真实 Chromium 与 `connectOverCDP`，测试数值提交、上下边界、非法值拒绝、断开后保留页面。2 个测试通过。该层使用本地控件样例，不冒充真实 Effect Maker 全流程。
-- **原生 CDP 核验**：项目中的文字字号 64、Y 位置 220、滤镜饱和度 15，重新选择对象后保持，保存状态“已保存”。
+- Switched through the actual Account menu language setting; verified English toolbar, property groups, creation buttons and node categories.
+- Observed 79 English node names in `node-catalog-en.json`. This is catalog observation, not 79 new English execution tests.
+- Live English SDK checks: select text; change size 64→65→64 and verify committed values; Math/Add creation and undo; create and rename temporary text; visibility off/on; delete temporary text; confirm saved state.
+- Real temporary Chromium integration: three tests passed. Two cover standalone Playwright/CDP, one runs the actual Browser Harness 0.1.13 package with the Python adapter. Tested numeric bounds, invalid values, scoped duplicate labels and disabled controls. The Harness test is explicitly skipped unless `HARNESS_PYTHON` is set.
+- Browser Harness has not been attached to the signed-in live Effect Maker project: the in-app tab does not expose a supplied external endpoint. The transport and helper logic are fixture-tested; live English checks used the Codex adapter.
 
-节点目录见 `node-catalog.json`。类别数量：触发器 8、逻辑 13、控制流 9、场景对象 4、数学 25、数据 14、图片和视频 6，共 79。
+## Historical Chinese-interface coverage
 
-## 已测试的功能
+Original records remain unchanged in `node-catalog.json`, `tests/results/raw-cdp-nodes.json` and `tests/results/sdk-live.json`; their Chinese labels are evidence, not current selectors.
 
-| 功能 | 实际动作与结果 | 覆盖边界 |
+- 79 visible nodes: created individually through native CDP, checked AX subtree growth, undone, and checked restoration. 79/79 passed.
+- 31 high-level SDK operation checks, including repeated restoration steps; not 31 distinct features.
+- Re-selection verified text size 64, Y position 220, filter saturation 15, and saved state.
+- Node categories: triggers 8, logic 13, control flow 9, scene objects 4, math 25, data 14, media 6.
+
+| Feature | Observed work | Boundary |
 |---|---|---|
-| 项目 | 新建 HeloWorld、改名、自动保存、重新打开 | 未批量删除或改动原有项目 |
-| 文字 | 添加、内容、颜色、粗体、字号、位置、适应宽度开关 | 并非每种字体/排列/阴影组合 |
-| 颜色滤镜 | 创建、饱和度修改并核对保存值 | LUT 上传未验证 |
-| 粒子 | 创建、查看发射/图片/外貌/移动参数、数量步进 | 未逐一执行所有粒子生命周期组合 |
-| 图片 | 生成并上传 64×64 PNG、创建图片对象、复用素材 | GIF 和用户上传序列未执行；AI 组合内置序列已创建 |
-| 面部彩绘 | 创建父级与图片子对象、查看区域/遮盖参数 | 无贴图分支；3D 材质分支未实测 |
-| 面部配饰 | 复用已上传图片，创建跟随面部的图片对象 | 3D 配饰上传分支未实测 |
-| 拉伸 | 创建、查看强度和对称控件 | 未穷举拉伸点 |
-| 身体分割 | 添加身体、查看平滑边缘/反转/不透明度 | 身体+背景组合未执行 |
-| 摄像头画面 | 添加画面对象，使用内置预览视频 | 未申请或启用真实摄像头 |
-| 3D | 导入生成的 GLB、切换 2D/3D 编辑及变换工具 | 未测试复杂网格、骨骼动画、所有材质 |
-| 光照 | 新建 Ambient，切换 Environment | 未遍历所有环境图片 |
-| AI 图片 | 输入英文提示，创建对象/提示/脚本，打开模型预览 | 未证明服务端生成结果质量或完成耗时 |
-| AI 视频 | 输入英文提示，创建提示及相关脚本/倒计时子图 | 未执行完整生成、录制或导出 |
-| 相机快照 | 创建画布与连线脚本组合 | 未测试真实相机捕获 |
-| 绘制 | 创建画布及连线脚本组合，识别与 AI 冲突后撤销 | 没有留下绘制冲突；未做手势笔迹质量验证 |
-| 视觉脚本 | 79 个节点创建/撤销、搜索、帮助信息读取 | **未对 79 个节点逐个连线执行及验证数学语义** |
-| 变量 | 创建默认数值变量、改名 score、查看类型选项 | 初值输入尝试未列为持久化通过；非数值/列表类型未逐个执行 |
-| 子图 | AI 视频组合创建倒计时子图；目录与入口可见 | 手动分组/拆分/端口编辑未完整测试 |
-| 对象管理 | 选择、复制、重命名、可见性开关、删除临时副本、撤销/重做 | 删除仅作用于本次创建的临时对象 |
-| 预览 | 播放/暂停、重置、选择内置模型、隐藏脚本布局 | 新窗口预览及所有机型/视频未遍历 |
-| 设备预览 | 二维码对话框成功打开 | 未用手机扫码验证 |
-| 特效限制 | 打开，出现“计算特效限制时出错” | 如实记录失败，不宣称通过 |
-| 提交 | 检查流程到达“特效缩略图”上传步骤，随后关闭 | 未正式提交、发布或接受条款 |
+| Projects | Created HeloWorld, renamed, saved, reopened | No bulk deletion |
+| Text | Content, color, bold, size, position, fit-width toggle | Not every font/layout/shadow combination |
+| Color filter | Creation and persisted saturation | LUT upload untested |
+| Particles | Creation, property inspection, quantity step | Lifecycle combinations not exhaustive |
+| Images | Generated/uploaded 64×64 PNG, reused asset | GIF/custom sequences not exercised |
+| Face paint | Parent/image child, regions and masking controls | 3D material branch untested |
+| Face accessory | Reused image in face-following object | 3D accessory branch untested |
+| Stretch | Creation and strength/symmetry controls | Not every stretch point |
+| Body segmentation | Body creation and edge/invert/opacity controls | Body-plus-background branch untested |
+| Camera feed | Object creation using built-in sample | Real camera not enabled |
+| 3D | Generated GLB import, editor modes and tools | Complex meshes/animation/materials untested |
+| Light | Ambient creation, Environment selection | Not every environment image |
+| AI image | English prompt, related objects/assets/graph, preview entry | Final generated output unverified |
+| AI video | Prompt, graph and countdown subgraph | Full generation/record/export untested |
+| Camera snapshot | Canvas and connected graph combination | Real camera capture untested |
+| Draw | Created combination, observed AI incompatibility, undone | Gesture quality untested |
+| Visual scripting | 79 creation/undo checks, search and help | No comprehensive wiring/execution semantics |
+| Variables | Default numeric variable, rename, type inspection | Initial value persistence not certified; other types untested |
+| Subgraphs | AI countdown subgraph and entry points | Manual grouping/ports not fully exercised |
+| Objects | Selection, duplicate, rename, visibility, temporary deletion, undo/redo | Deletion limited to temporary test objects |
+| Preview | Play/pause/reset, sample selection, layout | Not every device/video or new-window preview |
+| Device preview | QR dialog opened | No phone scan |
+| Effect limits | Dialog opened and reported a calculation error | Failure, not a pass |
+| Submit | Validation reached thumbnail setup, then closed | No submission/publication/terms acceptance |
 
-## 失败与修复
+## Fixes retained in the helpers
 
-1. 数值 `fill()` 初期只改变显示值。高层 SDK 改为上下步进触发提交并核对 `aria-valuenow`；原生 CDP 适配器使用受支持的键盘输入。滤镜 15 和文字 Y=220 已核对。
-2. 对象名称输入后的 Enter 未可靠结束编辑。加入明确失焦，重命名、删除、撤销和重做复测通过。
-3. 上传/选中素材后对话框会自动完成，继续点击“完成”会找不到按钮。封装改为等对话框关闭。
-4. 控件名称重复导致定位歧义。采用属性组、区域或观察到的索引消歧。
-5. 绘制与 AI 图片/视频冲突。记录限制并撤销绘制组合。
-6. 本地 Chromium 在普通沙盒内启动失败；以获准的隔离临时浏览器执行后，CDP 集成测试通过。
-7. 原生 CDP 键盘命令在 Codex 中被拒绝；未绕过限制，改走其正式键盘接口。DOM、AX、鼠标操作仍用原生 CDP。
-8. 页面/会话更换会使旧 tab handle 或元素评估失败。重新选择现存 tab 后原生 CDP 检查成功。SDK 不隐藏这类失败。
+1. Custom numeric fields can display uncommitted values. JavaScript uses a bounded arrow-key round trip; CDP/Harness use native keyboard entry and committed-value checks.
+2. Object rename needs explicit blur; Enter alone did not reliably finish editing.
+3. Asset selection/upload can auto-complete the dialog; do not click Done blindly.
+4. Duplicate accessible names require property-group or region scoping.
+5. Draw conflicts with AI image/video combinations.
+6. Codex rejects raw CDP keyboard commands. Its adapter uses the documented keyboard surface; the standalone Harness uses its own authorized transport.
+7. Stale managed tab handles need rebinding to the same existing tab. Mutation retries are not hidden.
 
-## 不应声称已完成的事项
-
-没有完成每一种参数排列、所有模板、所有节点运行逻辑、复杂资产兼容性、手机性能、真实摄像头、AI 最终生成、正式发布、反馈发送或账户设置的全面验收。测试结果是可复用自动化基础和明确的覆盖记录，不能写成“全部功能已测试通过”。
+All parameter permutations, all templates, node runtime correctness, complex asset compatibility, physical device performance, real camera, complete AI generation and formal publishing remain outside the verified scope.

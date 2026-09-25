@@ -9,10 +9,10 @@ const {fromCodexTab} = await import('/absolute/path/to/effectmaker/scripts/sdk.m
 const em = fromCodexTab(tab);
 await em.showObjects();
 await em.addText('Hello world');
-await em.setNumber('文字', '大小', 64);
-await em.setText('文字', '颜色', '#00e5ff');
-await em.setTextStyle('粗体', true);
-await em.setNumber('位置和大小', 'Y', 220);
+await em.setNumber('Text', 'Size', 64);
+await em.setText('Text', 'Color', '#00e5ff');
+await em.setTextStyle('Bold', true);
+await em.setNumber('Position & Scale', 'Y', 220);
 await em.waitSaved();
 ```
 
@@ -25,12 +25,12 @@ const cap = await tab.capabilities.get('cdp');
 nodeRepl.write(await cap.documentation());
 const {fromCodexRawTab} = await import('/absolute/path/to/effectmaker/scripts/raw-cdp.mjs');
 const raw = await fromCodexRawTab(tab);
-await raw.click('treeitem', '文字对象：HeloWorld');
-await raw.replace('spinbutton', '大小', '64', {
-  within: {role:'group', name:'文字'},
+await raw.click('treeitem', 'Text object: HeloWorld');
+await raw.replace('spinbutton', 'Size', '64', {
+  within: {role:'group', name:'Text'},
   selectAllModifier:4 // macOS; use 2 for Control on Windows/Linux
 });
-nodeRepl.write(await raw.value('spinbutton','大小',{within:{role:'group',name:'文字'}}));
+nodeRepl.write(await raw.value('spinbutton','Size',{within:{role:'group',name:'Text'}}));
 nodeRepl.write(await raw.saved());
 ```
 
@@ -45,8 +45,8 @@ const {sdk:em,disconnect} = await connectCDP('http://127.0.0.1:9222', {
 });
 try {
   console.log(await em.snapshot());
-  await em.selectObject('文字对象：HeloWorld');
-  await em.setNumber('文字','大小',64);
+  await em.selectObject('Text object: HeloWorld');
+  await em.setNumber('Text','Size',64);
   await em.waitSaved();
 } finally { await disconnect(); }
 ```
@@ -61,7 +61,7 @@ The endpoint must already be running and authorized. No endpoint/token/cookie is
 | Panels and trees | `openPanel(name)`, `showObjects()`, `showAssets()`, `listTree()`, `selectObject(accessibleName)`, `selectAsset(accessibleName)` |
 | Object creation | `beginAdd(kind)`, `finishAsset({path|existing|skip})`, `addText(text)` |
 | Properties | `setText(group,label,value)`, `setNumber(group,label,value,{index})`, `readNumber(group,label,index)`, `choose(group,label,option)`, `setCheckbox(group,label,checked)`, `setTextStyle(style,enabled)` |
-| Object operations | `objectMenu(name,'复制'|'重命名'|'删除')`, `renameObject(name,newName)`, `setObjectVisible(name,visible)`, `undo()`, `redo()` |
+| Object operations | `objectMenu(name,'Duplicate'|'Rename'|'Delete')`, `renameObject(name,newName)`, `setObjectVisible(name,visible)`, `undo()`, `redo()` |
 | Preview/editor | `setPlaying(bool)`, `resetPreview()`, `showPreviewModels()`, `choosePreviewModel(radioName)`, `devicePreview()`, `effectLimits()`, `dismissDialog()`, `editMode('2D'|'3D')`, `transformTool('move'|'rotate'|'scale')` |
 | Scripting | `setGraphVisible(bool)`, `nodeLibrary()`, `searchNodes(query)`, `nodeDetails(category,name)`, `addNode(category,name)`, `graphText()`, `smokeNode(category,name)` |
 | Variables/AI | `showVariables()`, `createVariable(name)`, `beginAI('aiImage'|'aiVideo',englishPrompt)` |
@@ -83,7 +83,7 @@ The tested GLB upload dialog states a 5 MB maximum. The face-paint image dialog 
 ### Node smoke checks
 
 ```js
-await em.smokeNode('数学','加');
+await em.smokeNode('Math','Add');
 ```
 
 This mutates the project temporarily. Run only in an authorized test project with no concurrent editing. It adds one node, undoes once, and checks graph text restoration. It does not connect or execute the node. The raw-CDP runner in `scripts/node-smoke.mjs` additionally verifies AX subtree size before and after each temporary node.
