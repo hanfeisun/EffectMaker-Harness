@@ -1,4 +1,4 @@
-# EffectMaker Skill & CDP SDK
+# EffectMaker Harness
 
 Reusable automation for [YouTube Effect Maker](https://effects.youtube.com/home), with English UI helpers and a [Browser Harness](https://github.com/browser-use/browser-harness) adapter.
 
