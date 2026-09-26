@@ -17,6 +17,13 @@ Install or update the Effect Maker skill from https://github.com/hanfeisun/effec
 
 Your GitHub account needs access to this private repository. The agent handles the installation steps.
 
+The agent will open `chrome://inspect/#remote-debugging`. On first setup, tick
+the checkbox so the agent can connect to your browser:
+
+<img src="docs/setup-remote-debugging.png" alt="Remote debugging setup" width="520" style="border-radius: 12px;" />
+
+<sub>Setup image from [Browser Harness](https://github.com/browser-use/browser-harness), used under the [MIT license](docs/browser-harness-LICENSE).</sub>
+
 ## How it works
 
 The Python adapter reuses [Browser Harness](https://github.com/browser-use/browser-harness) for its browser connection, CDP, mouse and keyboard operations. The skill adds Effect Maker-specific actions and verification. Codex browser and Playwright/CDP adapters are also available. See the [integration guide](skills/effectmaker/references/browser-harness.md) for technical details.
