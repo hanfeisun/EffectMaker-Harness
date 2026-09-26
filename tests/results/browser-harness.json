@@ -1,0 +1,25 @@
+{
+  "date": "2026-09-25",
+  "dependency": "browser-harness==0.1.13",
+  "transport": "actual Browser Harness daemon and CDP helpers connected to isolated real Chromium",
+  "passed": true,
+  "checks": [
+    "scoped values 23, 1, 100 committed",
+    "out-of-range and NaN rejected",
+    "ambiguous and disabled controls rejected",
+    "other group's value unchanged",
+    "Saved marker verified",
+    "multiline text preserved without an extra newline"
+  ],
+  "suite": {
+    "tests": 3,
+    "passed": 3,
+    "failed": 0,
+    "skipped": 0
+  },
+  "scope": "local fixture; not authenticated Effect Maker through Browser Harness",
+  "targetedRetest": {
+    "passed": 1,
+    "failed": 0
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "date": "2026-09-25",
+  "locale": "en-US",
+  "project": "HeloWorld",
+  "checks": [
+    {
+      "check": "select text",
+      "passed": true
+    },
+    {
+      "check": "change and restore committed size",
+      "passed": true
+    },
+    {
+      "check": "Math Add creation and undo",
+      "passed": true
+    },
+    {
+      "check": "create and rename text",
+      "passed": true
+    },
+    {
+      "check": "toggle object visibility",
+      "passed": true
+    },
+    {
+      "check": "remove test text",
+      "passed": true
+    }
+  ],
+  "allNodesExecutionTested": false
+}
