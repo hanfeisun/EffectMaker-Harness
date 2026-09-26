@@ -9,7 +9,7 @@ Reusable automation for [YouTube Effect Maker](https://effects.youtube.com/home)
 
 ## Setup prompt
 
-Paste this into Codex:
+Paste this into ChatGPT or Claude desktop app.
 
 ```text
 Install or update the Effect Maker skill from https://github.com/hanfeisun/effectmaker-skill-cdk-sdk using Git CLI. Register skills/effectmaker as my local $effectmaker skill, install its Browser Harness dependency, and connect to my browser. Set Effect Maker to English (US), preserve existing projects and local customizations, and verify the setup. Keep recordings off unless I ask for them. Use the repository's skill and Browser Harness guide to handle the setup details.
