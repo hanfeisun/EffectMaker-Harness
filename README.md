@@ -6,7 +6,6 @@ Reusable automation for [YouTube Effect Maker](https://effects.youtube.com/home)
 - [Browser Harness setup and recipes](skills/effectmaker/references/browser-harness.md)
 - [JavaScript API](skills/effectmaker/references/api.md)
 - [Coverage and limitations](skills/effectmaker/references/coverage.md)
-- [HeloWorld test project](https://effects.youtube.com/edit/Q0FJUXdPMWE)
 
 ## Use the skill
 
