@@ -7,21 +7,19 @@ Reusable automation for [YouTube Effect Maker](https://effects.youtube.com/home)
 - [JavaScript API](skills/effectmaker/references/api.md)
 - [Coverage and limitations](skills/effectmaker/references/coverage.md)
 
-## Use the skill
+## Setup prompt
 
-Copy `skills/effectmaker/` to `~/.codex/skills/effectmaker/`, then invoke `$effectmaker` or ask to edit an Effect Maker project. Inspect an existing installation before replacing it.
+Paste this into Codex:
 
-The current SDK targets **English (US)**. In Effect Maker, select **Account menu → Language → English (US)**. The setting reloads the editor; wait for saved state first. Existing object and asset names are project content and retain their original names.
-
-## Browser Harness reuse
-
-The Python adapter imports Browser Harness's real CDP, tab selection, mouse and keyboard helpers. Browser Harness owns the connection and daemon; our code adds scoped accessibility lookup, committed property checks, saving, text creation and node smoke checks. Its core is not copied or modified.
-
-```sh
-uv pip install -r requirements-harness.txt
+```text
+Install or update the Effect Maker skill from https://github.com/hanfeisun/effectmaker-skill-cdk-sdk using Git CLI. Register skills/effectmaker as my local $effectmaker skill, install its Browser Harness dependency, and connect to my browser. Set Effect Maker to English (US), preserve existing projects and local customizations, and verify the setup. Keep recordings off unless I ask for them. Use the repository's skill and Browser Harness guide to handle the setup details.
 ```
 
-Use an already authorized Browser Harness connection. See the [integration guide](skills/effectmaker/references/browser-harness.md). The Codex in-app browser and standalone Playwright adapters remain available. A Codex tab handle is not a Browser Harness websocket endpoint.
+Your GitHub account needs access to this private repository. The agent handles the installation steps.
+
+## How it works
+
+The Python adapter reuses [Browser Harness](https://github.com/browser-use/browser-harness) for its browser connection, CDP, mouse and keyboard operations. The skill adds Effect Maker-specific actions and verification. Codex browser and Playwright/CDP adapters are also available. See the [integration guide](skills/effectmaker/references/browser-harness.md) for technical details.
 
 ## Validation
 
