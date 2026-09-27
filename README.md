@@ -33,7 +33,8 @@ The Python adapter reuses [Browser Harness](https://github.com/browser-use/brows
 - English live editor: text creation, rename, visibility, cleanup, size change/restoration, save and Math/Add creation/undo.
 - English catalog: 79 visible node names observed.
 - Historical Chinese UI: 79 node creation/undo checks and 31 SDK operation checks (including restoration steps).
-- Real temporary Chromium: Playwright/CDP and Browser Harness integration tests passed, including scoped numeric entry, bounds and invalid/ambiguous target rejection.
+- Real temporary Chromium: Playwright/CDP and Browser Harness integration tests passed, including scoped numeric entry, bounds, invalid/ambiguous target rejection, panel toggling, creation routes and asset upload.
+- Live Browser Harness (Windows, local Chrome): project creation, text, GLB upload, 3D transforms, all toolbar panels, object duplicate/rename/visibility/delete, and `.cube`, square-PNG and row-PNG LUTs verified in the playing preview with a single Color filter.
 
 These are scoped checks, not a claim that all node execution semantics, AI generation, phone performance or publishing were verified. Historical evidence keeps its original Chinese labels.
 
