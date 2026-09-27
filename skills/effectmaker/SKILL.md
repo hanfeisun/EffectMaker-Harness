@@ -9,7 +9,7 @@ Use the supplied project and current signed-in session. The helpers target **Eng
 
 ## Choose the available transport
 
-**Browser Harness:** read [integration and recipes](references/browser-harness.md), then import `scripts/effectmaker_harness.py` inside an existing authorized Browser Harness session. It reuses upstream connection, CDP, mouse and keyboard helpers. Put project-specific additions in the agent workspace; do not modify the upstream core. Select exactly one matching project tab and serialize operations because a daemon has one current tab.
+**Browser Harness:** read [integration and recipes](references/browser-harness.md), then import `scripts/effectmaker_harness.py` inside an existing authorized Browser Harness session. It reuses upstream connection, CDP, mouse, keyboard and file-upload helpers, and covers project creation, panels, creation routes and asset upload (`begin_add` + `upload_asset`). Wrap work on a background tab in `with em.focused():`, run multi-step menu interactions in one invocation, and on Windows set `PYTHONIOENCODING=utf-8`. Put project-specific additions in the agent workspace; do not modify the upstream core. Select exactly one matching project tab and serialize operations because a daemon has one current tab.
 
 **Codex in-app browser:** read its current browser documentation, bind the supplied tab, import `scripts/sdk.mjs`, and call `fromCodexTab(tab)`. For raw CDP, read the tab's CDP capability documentation and use `fromCodexRawTab(tab)` from `scripts/raw-cdp.mjs`. The wrapper uses CDP for AX/DOM/mouse and the supported Codex keyboard API for text. Do not use Browser Harness to bypass a restricted Codex command or search internal app configuration for a websocket.
 
@@ -27,6 +27,9 @@ Use [API and recipes](references/api.md) for JavaScript operations, [English nod
 - Saved state is `data-title="Saved"` on **Save status indicator**. Retry reads only; inspect after an ambiguous mutation before repeating it.
 - Undo changes selection. Node smoke checks require an authorized test project with no concurrent editing, then create one node, undo once and check restoration. They do not prove node execution semantics.
 - Draw conflicts with AI image/video combinations. Use separate test projects or undo the temporary Draw combination.
+- An effect may use only one LUT, but the editor does not block adding a second Color filter. To change the look, swap the existing filter's **LUT** combobox (Harness: `choose('LUT','LUT','Add LUT...', upload=path)`); `Add LUT...` opens the OS file chooser directly, so intercept it rather than clicking blind. PNG LUTs are stored as Image assets and do not appear in that combobox afterwards.
+- Object visibility (row eye button) affects only the editor scene view, not the effect or the Preview panel. Do not use it to compare effect output.
+- Keep the Preview playing when checking effect output; a paused preview does not redraw after edits, even after Reset effect. Do not pause it as a side effect.
 - Built-in preview video does not require camera permission. A device QR dialog does not prove phone compatibility.
 - Submit initially opens validation/thumbnail setup. Do not publish an effect as an incidental test.
 

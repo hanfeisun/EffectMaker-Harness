@@ -3,6 +3,7 @@ export const ORIGIN = 'https://effects.youtube.com';
 export const recipes = Object.freeze({
   text: ['Text', null, 'Add text'],
   filter: ['Visual effects', 'Color filter', 'Add filter'],
+  lut: ['Visual effects', 'Color filter', 'Use LUT'],
   particles: ['Visual effects', 'Particles', 'Add particles'],
   image: ['Image and video', 'Images', 'Add image'],
   imageSequence: ['Image and video', 'Images', 'Add image sequence'],
