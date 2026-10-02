@@ -15,7 +15,7 @@ Paste this into ChatGPT or Claude desktop app.
 Install or update the Effect Maker skill from https://github.com/hanfeisun/effectmaker-skill-cdk-sdk using Git CLI. Register skills/effectmaker as my local $effectmaker skill, install its Browser Harness dependency, and connect to my browser. Set Effect Maker to English (US), preserve existing projects and local customizations, and verify the setup. Keep recordings off unless I ask for them. Use the repository's skill and Browser Harness guide to handle the setup details.
 ```
 
-Your GitHub account needs access to this private repository. The agent handles the installation steps.
+Your GitHub account needs access to this repository. The agent handles the installation steps.
 
 The agent will open `chrome://inspect/#remote-debugging`. On first setup, tick
 the checkbox so the agent can connect to your browser:
